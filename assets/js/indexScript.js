@@ -119,6 +119,7 @@ for(let i = 0; i < newsTitles.length; i++){
 
     let newCaption = document.createElement("p");
     newCaption.innerHTML = `${newsCaption[i]}`;
+    newCaption.setAttribute("class", "titleNews");
 
     let newContent = document.createElement("p");
     newContent.innerHTML = `${newsContent[i]}`;
@@ -143,7 +144,7 @@ for(let i = 0; i < newsTitles.length; i++){
       var additionalText = document.getElementById(`moreText${i}`);
       if(button.style.display === "block"){
         button.style.display = "none";
-        additionalText.style.display = "inline";
+        additionalText.style.display = "block";
       }
       else{
         button.style.display = "block";

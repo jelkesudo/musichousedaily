@@ -165,13 +165,13 @@ body{
                         border-radius: 15px;
                     }
                     :hover{
+                        transition: 0.5s;
                         .artistName{
                             display:block;
                             border-radius: 15px;
                             background-color: rgba($color: $pageColor, $alpha: 0.5);
                             color: $whiteLetters;
                             height: 100%;
-                            transition: 0.5s ease-out;
                         }
                     }
                 }
@@ -190,10 +190,13 @@ body{
                 color: $whiteLetters;
                 box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
                 h2,p,span{
-                    margin-left: 10px;
+                    margin: 10px 10px 0px 10px;
                 }
                 h2{
                     padding: 10px 0px; 
+                }
+                .titleNews{
+                    padding-bottom: 5px;
                 }
                 span{
                     padding-bottom: 10px;
@@ -207,6 +210,7 @@ body{
                 @for $i from 0 through 11 {
                     #moreText#{$i} {
                       display: none;
+                      padding-bottom: 10px;
                     }
                 }
             }

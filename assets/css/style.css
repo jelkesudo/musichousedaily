@@ -200,14 +200,17 @@ body main .carousel .center a img {
   border-radius: 15px;
 }
 
+body main .carousel .center a :hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 body main .carousel .center a :hover .artistName {
   display: block;
   border-radius: 15px;
   background-color: rgba(18, 18, 18, 0.5);
   color: #FFFFFF;
   height: 100%;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
 }
 
 body main #news {
@@ -234,11 +237,15 @@ body main #news .newsArticle {
 }
 
 body main #news .newsArticle h2, body main #news .newsArticle p, body main #news .newsArticle span {
-  margin-left: 10px;
+  margin: 10px 10px 0px 10px;
 }
 
 body main #news .newsArticle h2 {
   padding: 10px 0px;
+}
+
+body main #news .newsArticle .titleNews {
+  padding-bottom: 5px;
 }
 
 body main #news .newsArticle span {
@@ -254,50 +261,62 @@ body main #news .newsArticle img {
 
 body main #news .newsArticle #moreText0 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText1 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText2 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText3 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText4 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText5 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText6 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText7 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText8 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText9 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText10 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText11 {
   display: none;
+  padding-bottom: 10px;
 }
 
 body main .container {
