@@ -19,8 +19,8 @@ setInterval(changeHeading, 2000);
 
 //carousel
 
-let names = ["Drake", "Rihanna", "Kanye West", "The Weekend", "Idk", "Idk2"];
-let namesPictures = ["drake", "rihanna", "kanye", "weekend", "weekend", "weekend"];
+let names = ["Drake", "Rihanna", "Kanye West", "The Weekend", "Billie Eilish", "Idk2"];
+let namesPictures = ["drake", "rihanna", "kanye", "weekend", "billie", "weekend"];
 
 let carouselBlock = document.getElementById("carouselBlock");
 let artistCarousel = document.createElement("div");
@@ -97,7 +97,7 @@ let news = document.querySelector("#news");
 
 let newsTitles = ["Kanye drops new album \"Donda\"", 
                     "Rihanna named 11th national hero of Barbados", 
-                    "Title3", 
+                    "Drake's new album just got out", 
                     "Title4", 
                     "Title5", 
                     "Title6", 
@@ -109,7 +109,7 @@ let newsTitles = ["Kanye drops new album \"Donda\"",
                     "Title12"];
 let newsCaption = ["Kanye climbed the leaderboar with his new album", 
                     "Rihanna being honored a new title", 
-                    "Lorem ipsum dolor sit amet", 
+                    "Certified Lover Boy hits top charts", 
                     "Lorem ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet", 
@@ -120,18 +120,18 @@ let newsCaption = ["Kanye climbed the leaderboar with his new album",
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet" ];
 
-let newsPicture = ["picture1.jpg", 
-                    "picture1.jpg",
-                    "picture1.jpg",
-                    "picture1.jpg", 
-                    "picture1.jpg", 
-                    "picture1.jpg", 
-                    "picture1.jpg",
-                    "picture1.jpg",
-                    "picture1.jpg",
-                    "picture1.jpg",
-                    "picture1.jpg",
-                    "picture1.jpg"];
+let newsPicture = ["kanye-chant.jpg", 
+                    "rihanna-barbados.jpg",
+                    "drake-clb.jpg",
+                    "kanye-chant.jpg", 
+                    "kanye-chant.jpg", 
+                    "kanye-chant.jpg", 
+                    "kanye-chant.jpg",
+                    "kanye-chant.jpg",
+                    "kanye-chant.jpg",
+                    "kanye-chant.jpg",
+                    "kanye-chant.jpg",
+                    "kanye-chant.jpg"];
 let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
@@ -182,11 +182,9 @@ for(let i = 0; i < newsTitles.length; i++){
       var additionalText = document.getElementById(`moreText${i}`);
       if(button.innerHTML == "Click/tap the box for more..."){
         button.innerHTML = "Click/tap the box to minimize...";
-        $( "select#foo option:checked" ).val();
       }
       else{
         button.innerHTML = "Click/tap the box for more...";
-        $( "select#foo option:checked" ).val();
       }
       $(additionalText).toggle();
     });
