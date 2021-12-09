@@ -199,6 +199,7 @@ body{
                 }
                 h2{
                     padding: 10px 0px; 
+                    font-size: 21px;
                 }
                 .titleNews{
                     padding-bottom: 5px;
@@ -214,8 +215,7 @@ body{
                 }
                 @for $i from 0 through 11 {
                     #moreText#{$i} {
-                      display: none;
-                      padding-bottom: 10px;
+                        display: none;
                     }
                 }
             }
@@ -280,7 +280,7 @@ body{
                         h1{
                             font-size: 50px;
                         }
-                        p,span{
+                        p{
                             font-size: 25px;
                         }
                         
@@ -310,8 +310,11 @@ body{
                         h1{
                             font-size: 37px;
                         }
-                        p,span{
+                        p{
                             font-size: 20px;
+                        }
+                        span{
+                            font-size: 27px;
                         }
                     }
                 }
@@ -351,8 +354,11 @@ body{
                             font-size: 28px;
                             padding-bottom: 30px;
                         }
-                        p,span{
+                        p{
                             font-size: 15px;
+                        }
+                        span{
+                            font-size: 20px;
                         }
                         a{
                             button{
@@ -420,8 +426,11 @@ body{
                             font-size: 28px;
                             padding-bottom: 30px;
                         }
-                        p,span{
+                        p{
                             font-size: 15px;
+                        }
+                        span{
+                            font-size: 20px;
                         }
                     }
                 }
@@ -485,7 +494,7 @@ body{
                             font-size: 28px;
                             padding-bottom: 30px;
                         }
-                        p,span{
+                        p{
                             font-size: 15px;
                         }
                         a{
@@ -530,8 +539,11 @@ body{
                             font-size: 20px;
                             padding-bottom: 30px;
                         }
-                        p,span{
+                        p{
                             font-size: 12px;
+                        }
+                        span{
+                            font-size: 18px;
                         }
                         a{
                             button{

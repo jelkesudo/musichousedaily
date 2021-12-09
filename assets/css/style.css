@@ -248,6 +248,7 @@ body main #news .newsArticle h2, body main #news .newsArticle p, body main #news
 
 body main #news .newsArticle h2 {
   padding: 10px 0px;
+  font-size: 21px;
 }
 
 body main #news .newsArticle .titleNews {
@@ -267,62 +268,50 @@ body main #news .newsArticle img {
 
 body main #news .newsArticle #moreText0 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText1 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText2 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText3 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText4 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText5 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText6 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText7 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText8 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText9 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText10 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main #news .newsArticle #moreText11 {
   display: none;
-  padding-bottom: 10px;
 }
 
 body main .container {
@@ -403,7 +392,7 @@ body #footer .copyright :hover {
   body main .cover .welcomeText .contentText h1 {
     font-size: 50px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 25px;
   }
 }
@@ -415,8 +404,11 @@ body #footer .copyright :hover {
   body main .cover .welcomeText .contentText h1 {
     font-size: 37px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 20px;
+  }
+  body main .cover .welcomeText .contentText span {
+    font-size: 27px;
   }
 }
 
@@ -439,8 +431,11 @@ body #footer .copyright :hover {
     font-size: 28px;
     padding-bottom: 30px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 15px;
+  }
+  body main .cover .welcomeText .contentText span {
+    font-size: 20px;
   }
   body main .cover .welcomeText .contentText a button {
     margin-top: 30px;
@@ -496,8 +491,11 @@ body #footer .copyright :hover {
     font-size: 28px;
     padding-bottom: 30px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 15px;
+  }
+  body main .cover .welcomeText .contentText span {
+    font-size: 20px;
   }
   body main .cover .picture {
     padding: 80px 0px;
@@ -549,7 +547,7 @@ body #footer .copyright :hover {
     font-size: 28px;
     padding-bottom: 30px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 15px;
   }
   body main .cover .welcomeText .contentText a button {
@@ -577,8 +575,11 @@ body #footer .copyright :hover {
     font-size: 20px;
     padding-bottom: 30px;
   }
-  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  body main .cover .welcomeText .contentText p {
     font-size: 12px;
+  }
+  body main .cover .welcomeText .contentText span {
+    font-size: 18px;
   }
   body main .cover .welcomeText .contentText a button {
     margin-top: 30px;
