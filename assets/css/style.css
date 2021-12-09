@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@font-face {
+  font-family: "br";
+  src: url("../fonts/br.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Outfit', sans-serif;
+}
+
+body header {
+  position: fixed;
+  width: 100%;
+  padding: 5px 0px;
+  background-color: #121212;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body header a :hover {
+  color: #1a73da;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body header a i {
+  margin-top: 6px;
+  margin-left: 150px;
+  font-size: 45px;
+}
+
+body header nav {
+  width: 40%;
+}
+
+body header nav ul {
+  padding: 12px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body header nav ul a :hover {
+  background-color: #1a73da;
+  color: #FFFFFF;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body header nav ul a li {
+  border-radius: 25px;
+  background-color: none;
+  margin: 0px 10px;
+  padding: 5px 10px;
+}
+
+body main .cover {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .cover .welcomeText, body main .cover .picture {
+  width: 50%;
+}
+
+body main .cover .welcomeText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .cover .welcomeText .contentText {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+body main .cover .welcomeText .contentText h1 {
+  font-size: 65px;
+  padding-bottom: 50px;
+}
+
+body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+  font-size: 30px;
+}
+
+body main .cover .welcomeText .contentText a button {
+  margin-top: 20px;
+  padding: 20px 50px;
+  background-color: #1a73da;
+  border: 1px solid #121212;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+body main .cover .welcomeText .contentText a :hover {
+  background-color: #FFFFFF;
+  border: 1px solid #1a73da;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body main .cover .picture img {
+  width: 100%;
+}
+
+body main .carousel {
+  width: 100%;
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+body main .carousel .carouselHeading {
+  padding: 50px 0px;
+}
+
+body main .carousel .center {
+  width: 80%;
+  margin: 0px auto;
+}
+
+body main .carousel .center a div {
+  margin: 0px 10px;
+  padding: 50px 0px;
+  text-align: center;
+  border: 1px solid #121212;
+  color: #121212;
+}
+
+body main .carousel .center a :hover {
+  background-color: #121212;
+  color: #FFFFFF;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+body main #news {
+  width: 80%;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #news .newsArticle {
+  width: 30%;
+  margin: 10px 0px;
+  border-radius: 15px;
+  background-color: #121212;
+  color: #FFFFFF;
+  -webkit-box-shadow: 4px 3px rgba(18, 18, 18, 0.5);
+          box-shadow: 4px 3px rgba(18, 18, 18, 0.5);
+}
+
+body main #news .newsArticle h2, body main #news .newsArticle p, body main #news .newsArticle span {
+  margin-left: 10px;
+}
+
+body main #news .newsArticle h2 {
+  padding: 10px 0px;
+}
+
+body main #news .newsArticle span {
+  padding-bottom: 10px;
+  color: #1a73da;
+  font-weight: bold;
+}
+
+body main #news .newsArticle img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+body #footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #121212;
+}
+
+body #footer ul {
+  width: 20%;
+  margin: 15px 0px;
+  padding: 10px 25px;
+  color: #FFFFFF;
+  list-style-type: disc;
+  border-left: 2px solid #FFFFFF;
+}
+
+body #footer ul li {
+  padding: 10px 0px;
+}
+
+body #footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+body #footer .copyright a {
+  color: #1a73da;
+}
+
+body #footer .copyright :hover {
+  color: #ce5f15;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1450px) {
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 50px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  body header nav ul a li {
+    margin: 0px;
+  }
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 37px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  body header a i {
+    font-size: 33px;
+    margin-left: 50px;
+  }
+  body header nav ul a li {
+    font-size: 10px;
+  }
+  body main .cover {
+    padding-top: 100px;
+    height: auto;
+  }
+  body main .cover .welcomeText, body main .cover .picture {
+    width: 100%;
+  }
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 15px;
+  }
+  body main .cover .welcomeText .contentText a button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+  body main .cover .picture {
+    padding: 80px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .cover .picture img {
+    width: 70%;
+    margin: auto;
+  }
+  body main #news .newsArticle {
+    width: 48%;
+  }
+  body main #news .newsArticle h2, body main #news .newsArticle p, body main #news .newsArticle span {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  body main #news .newsArticle h2 {
+    padding: 10px 0px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body header {
+    position: relative;
+  }
+  body header a i {
+    font-size: 33px;
+    margin-left: 25px;
+  }
+  body header nav {
+    width: 70%;
+  }
+  body header nav ul a li {
+    font-size: 10px;
+  }
+  body main .cover .welcomeText, body main .cover .picture {
+    width: 100%;
+  }
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 15px;
+  }
+  body main .cover .picture {
+    padding: 80px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .cover .picture img {
+    width: 70%;
+    margin: auto;
+  }
+  body main #news .newsArticle {
+    width: 100%;
+  }
+  body main #news .newsArticle h2, body main #news .newsArticle p, body main #news .newsArticle span {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  body main #news .newsArticle h2 {
+    padding: 10px 0px;
+    font-size: 18px;
+  }
+  body #footer ul {
+    width: 100%;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  body header {
+    position: relative;
+  }
+  body header a i {
+    font-size: 30px;
+    margin-left: 25px;
+  }
+  body header nav {
+    width: 70%;
+  }
+  body header nav ul a li {
+    font-size: 8px;
+  }
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 15px;
+  }
+  body main .cover .welcomeText .contentText a button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  body header {
+    position: relative;
+  }
+  body header a i {
+    font-size: 25px;
+    margin-left: 25px;
+  }
+  body header nav {
+    width: 80%;
+  }
+  body header nav ul a li {
+    font-size: 8px;
+  }
+  body main .cover .welcomeText .contentText h1 {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+    font-size: 12px;
+  }
+  body main .cover .welcomeText .contentText a button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+}
+
+.slick-prev.slick-arrow:before {
+  color: #121212;
+}
+
+.slick-next.slick-arrow:before {
+  color: #121212;
+}
+/*# sourceMappingURL=style.css.map */

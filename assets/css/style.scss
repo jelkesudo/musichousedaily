@@ -1,0 +1,498 @@
+$pageColor: #121212;
+$whiteLetters: #FFFFFF;
+$assetsBlue: rgb(26, 115, 218);
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@font-face {
+    font-family: "br";
+    src: url("../fonts/br.ttf");
+}
+@mixin fleks-around {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+@mixin fleks-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@mixin fleks-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $whiteLetters;
+}
+body{
+    background-color: $whiteLetters;
+    font-family: 'Outfit', sans-serif;
+    header{
+        position: fixed;
+        width: 100%;
+        padding: 5px 0px;
+        background-color: $pageColor;
+        color: $whiteLetters;
+        @include fleks-between();
+        a{
+            :hover{
+                color: $assetsBlue;
+                transition: 0.5s;
+            }
+            i{
+                margin-top: 6px;
+                margin-left: 150px;
+                font-size: 45px;
+            }
+        }
+        nav{
+            width: 40%;
+            ul{
+                padding: 12px 5px;
+                @include fleks-center();
+                a{
+                    :hover{
+                        background-color: $assetsBlue;
+                        color: $whiteLetters;
+                        transition: 0.5s;
+                    }
+                    li{
+                        border-radius: 25px;
+                        background-color: none;
+                        margin: 0px 10px;
+                        padding: 5px 10px;
+                    } 
+                }
+            }
+        }
+    }
+    main{
+        .cover{
+            width: 100%;
+            height: 100vh;
+            @include fleks-center();
+            align-items: center;
+            .welcomeText, .picture{
+                width: 50%;
+            }
+            .welcomeText{
+                @include fleks-center();
+                .contentText{
+                    width: 60%;
+                    margin: auto;
+                    text-align: center;
+                    h1{
+                        // font-family: "font-logo";
+                        font-size: 65px;
+                        padding-bottom: 50px;
+                    }
+                    p, span{
+                        font-size: 30px;
+                    }
+                    a{
+                        button{
+                            margin-top: 20px;
+                            padding: 20px 50px;
+                            background-color: $assetsBlue;
+                            border: 1px solid $pageColor;
+                            border-radius: 25px;
+                            cursor: pointer;
+                            color: white;
+                        }
+                        :hover{
+                            background-color: $whiteLetters;
+                            border: 1px solid $assetsBlue;
+                            color: black;
+                            transition: 0.5s;
+                        }
+                    }
+                    
+                }
+            }
+            .picture{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .carousel{
+            width: 100%;
+            border-top: 1px solid $pageColor;
+            border-bottom: 1px solid $pageColor;
+            text-align: center;
+            padding-bottom: 50px;
+            .carouselHeading{
+                padding: 50px 0px;
+            }
+            .center{
+                width: 80%;
+                margin: 0px auto;
+                a{
+                    div{
+                        margin: 0px 10px;
+                        padding: 50px 0px;
+                        text-align: center;
+                        border: 1px solid $pageColor;
+                        color: $pageColor;
+                    }
+                    :hover{
+                        background-color: $pageColor;
+                        color: $whiteLetters;
+                        transition: 0.5s ease-out;
+                    }
+                }
+            }
+        }
+        #news{
+            width: 80%;
+            margin: 50px auto;
+            @include fleks-around();
+            .newsArticle{
+                width: 30%;
+                margin: 10px 0px;
+                border-radius: 15px;
+                background-color: $pageColor;
+                color: $whiteLetters;
+                box-shadow: 4px 3px rgba($color: $pageColor, $alpha: 0.5);
+                h2,p,span{
+                    margin-left: 10px;
+                }
+                h2{
+                    padding: 10px 0px; 
+                }
+                span{
+                    padding-bottom: 10px;
+                    color: $assetsBlue;
+                    font-weight: bold;
+                }
+                img{
+                    width: 100%;
+                    border-radius: 15px 15px 0px 0px;
+                }
+            }
+        }
+    }
+    #footer{
+        width: 100%;
+        @include fleks-center();
+        background-color: $pageColor;
+        ul{
+            width: 20%;
+            margin: 15px 0px;
+            padding: 10px 25px;
+            color: $whiteLetters;
+            list-style-type: disc;
+            border-left: 2px solid $whiteLetters;
+            li{
+                padding: 10px 0px;
+            }
+        }
+        .copyright{
+            width: 100%;
+            text-align: center;
+            color: $whiteLetters;
+            a{
+                color:$assetsBlue;
+            }
+            :hover{
+                color: rgb(206, 95, 21);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1450px) {
+    body {
+        main{
+            .cover{
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 50px;
+                        }
+                        p,span{
+                            font-size: 25px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1030px) {
+    body {
+        header{
+            nav{
+                ul{
+                    a{
+                        li{
+                            margin: 0px;
+                        } 
+                    }
+                }
+            }
+        }
+        main{
+            .cover{
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 37px;
+                        }
+                        p,span{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    body {
+        header{
+            a{
+                i{
+                    font-size: 33px;
+                    margin-left: 50px;
+                }
+            }
+            nav{
+                ul{
+                    a{
+                        li{
+                            font-size: 10px;
+                        } 
+                    }
+                }
+            }
+        }
+        main{
+            .cover{
+                padding-top: 100px;
+                height: auto;
+                .welcomeText, .picture{
+                    width: 100%;
+                }
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 28px;
+                            padding-bottom: 30px;
+                        }
+                        p,span{
+                            font-size: 15px;
+                        }
+                        a{
+                            button{
+                                margin-top: 30px;
+                                padding: 10px 30px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .picture{
+                    padding: 80px 0px;
+                    @include fleks-center;
+                    img{
+                        width: 70%;
+                        margin: auto;
+                    }
+                }
+            }
+            #news{
+                .newsArticle{
+                    width: 48%;
+                    h2,p,span{
+                        margin-left: 10px;
+                        font-size: 12px;
+                    }
+                    h2{
+                        padding: 10px 0px; 
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    body {
+        header{
+            position: relative;
+            a{
+                i{
+                    font-size: 33px;
+                    margin-left: 25px;
+                }
+            }
+            nav{
+                width: 70%;
+                ul{
+                    a{
+                        li{
+                            font-size: 10px;
+                        } 
+                    }
+                }
+            }
+        }
+        main{
+            .cover{
+                .welcomeText, .picture{
+                    width: 100%;
+                }
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 28px;
+                            padding-bottom: 30px;
+                        }
+                        p,span{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .picture{
+                    padding: 80px 0px;
+                    @include fleks-center;
+                    img{
+                        width: 70%;
+                        margin: auto;
+                    }
+                }
+            }
+            #news{
+                .newsArticle{
+                    width: 100%;
+                    h2,p,span{
+                        margin-left: 10px;
+                        font-size: 12px;
+                    }
+                    h2{
+                        padding: 10px 0px; 
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        #footer{
+            ul{
+                width: 100%;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    body {
+        header{
+            position: relative;
+            a{
+                i{
+                    font-size: 30px;
+                    margin-left: 25px;
+                }
+            }
+            nav{
+                width: 70%;
+                ul{
+                    a{
+                        li{
+                            font-size: 8px;
+                        } 
+                    }
+                }
+            }
+        }
+        main{
+            .cover{
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 28px;
+                            padding-bottom: 30px;
+                        }
+                        p,span{
+                            font-size: 15px;
+                        }
+                        a{
+                            button{
+                                margin-top: 30px;
+                                padding: 10px 20px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 325px) {
+    body {
+        header{
+            position: relative;
+            a{
+                i{
+                    font-size: 25px;
+                    margin-left: 25px;
+                }
+            }
+            nav{
+                width: 80%;
+                ul{
+                    a{
+                        li{
+                            font-size: 8px;
+                        } 
+                    }
+                }
+            }
+        }
+        main{
+            .cover{
+                .welcomeText{
+                    .contentText{
+                        h1{
+                            font-size: 20px;
+                            padding-bottom: 30px;
+                        }
+                        p,span{
+                            font-size: 12px;
+                        }
+                        a{
+                            button{
+                                margin-top: 30px;
+                                padding: 10px 20px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//carousel arrow colors
+
+.slick-prev.slick-arrow:before {
+    color: $pageColor;
+  }
+  .slick-next.slick-arrow:before {
+    color: $pageColor;
+  }
