@@ -17,13 +17,11 @@ function changeHeading(){
 
 //carousel
 
-
-
 $(document).ready(function(){
   $('.center').slick({
       centerMode: true,
       centerPadding: '60px',
-      slidesToShow: 3,
+      slidesToShow: 4,
       autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
@@ -33,7 +31,7 @@ $(document).ready(function(){
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 2
+            slidesToShow: 3
           }
         },
         {
@@ -95,7 +93,19 @@ let newsPicture = ["assets/img/news/picture1.jpg",
                     "assets/img/news/picture1.jpg",
                     "assets/img/news/picture1.jpg",
                     "assets/img/news/picture1.jpg",
-                    "assets/img/news/picture1.jpg"]
+                    "assets/img/news/picture1.jpg"];
+let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
+                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
 
 for(let i = 0; i < newsTitles.length; i++){
     let newNewsArticle = document.createElement("div");
@@ -110,17 +120,36 @@ for(let i = 0; i < newsTitles.length; i++){
     let newCaption = document.createElement("p");
     newCaption.innerHTML = `${newsCaption[i]}`;
 
+    let newContent = document.createElement("p");
+    newContent.innerHTML = `${newsContent[i]}`;
+    newContent.setAttribute("id", `moreText${i}`);
+
     newNewsArticle.appendChild(newImg);
     newNewsArticle.appendChild(newTitle);
     newNewsArticle.appendChild(newCaption);
 
-    var readMoreText = document.createTextNode("Read more...");
+    var readMoreText = document.createTextNode("Click/tap the box for more...");
     var readMore = document.createElement("span");
+    readMore.setAttribute("id", `readMore${i}`);
+    readMore.style.display = "block"
 
     readMore.appendChild(readMoreText);
     newNewsArticle.appendChild(readMore);
 
-    newNewsArticle
+    newNewsArticle.appendChild(newContent);
+
+    newNewsArticle.addEventListener("click", function(){
+      var button = document.getElementById(`readMore${i}`);
+      var additionalText = document.getElementById(`moreText${i}`);
+      if(button.style.display === "block"){
+        button.style.display = "none";
+        additionalText.style.display = "inline";
+      }
+      else{
+        button.style.display = "block";
+        additionalText.style.display = "none";
+      }
+    });
     
     news.appendChild(newNewsArticle);
 }

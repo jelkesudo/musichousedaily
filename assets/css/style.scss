@@ -43,6 +43,7 @@ body{
         padding: 5px 0px;
         background-color: $pageColor;
         color: $whiteLetters;
+        z-index: 5;
         @include fleks-between();
         a{
             :hover{
@@ -134,41 +135,43 @@ body{
                 padding: 50px 0px;
             }
             .center{
-                width: 80%;
+                width: 75%;
                 margin: 0px auto;
                 a{
                 .carouselItem{
-                            position: absolute;
-                            z-index: 1;
-                            margin: 0px 10px;
-                            text-align: center;
-                            border: 1px solid $pageColor;
-                            color: $pageColor;
-                            position: relative;
-                        .artistName{
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            display: none;
-                            p{
-                                padding: 100px 0px;
-                            }
-                        }
-                        :hover{
-                            background-color: rgba($color: $pageColor, $alpha: 0.5);;
-                            color: $whiteLetters;
-                            height: 100%;
-                            transition: 0.5s ease-out;
+                    width: 50%;
+                    z-index: 1;
+                    margin: 0px auto;
+                    text-align: center;
+                    border: 1px solid $pageColor;
+                    border-radius: 15px;
+                    color: $pageColor;
+                    position: relative;
+                    box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
+                    .artistName{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        p{
+                            padding: 90px 0px;
                         }
                     }
+                }
                     img{
                         width: 100%;
+                        border-radius: 15px;
                     }
                     :hover{
                         .artistName{
                             display:block;
+                            border-radius: 15px;
+                            background-color: rgba($color: $pageColor, $alpha: 0.5);
+                            color: $whiteLetters;
+                            height: 100%;
+                            transition: 0.5s ease-out;
                         }
                     }
                 }
@@ -200,6 +203,11 @@ body{
                 img{
                     width: 100%;
                     border-radius: 15px 15px 0px 0px;
+                }
+                @for $i from 0 through 11 {
+                    #moreText#{$i} {
+                      display: none;
+                    }
                 }
             }
         }
@@ -352,47 +360,6 @@ body{
                     img{
                         width: 70%;
                         margin: auto;
-                    }
-                }
-            }
-            .carousel{
-                .center{
-                    width: 100%;
-                    a{
-                    .carouselItem{
-                                position: absolute;
-                                z-index: 1;
-                                margin: 0px 10px;
-                                text-align: center;
-                                border: 1px solid $pageColor;
-                                color: $pageColor;
-                                position: relative;
-                            .artistName{
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                display: none;
-                                p{
-                                    padding: 100px 0px;
-                                }
-                            }
-                            :hover{
-                                background-color: rgba($color: $pageColor, $alpha: 0.5);;
-                                color: $whiteLetters;
-                                height: 100%;
-                                transition: 0.5s ease-out;
-                            }
-                        }
-                        img{
-                            width: 100%;
-                        }
-                        :hover{
-                            .artistName{
-                                display:block;
-                            }
-                        }
                     }
                 }
             }
