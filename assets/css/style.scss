@@ -1,7 +1,6 @@
 $pageColor: #121212;
 $whiteLetters: #FFFFFF;
 $assetsBlue: rgb(26, 115, 218);
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 @font-face {
     font-family: "br";
     src: url("../fonts/br.ttf");
@@ -37,7 +36,7 @@ a{
 }
 body{
     background-color: $whiteLetters;
-    font-family: 'Outfit', sans-serif;
+    font-family: "br";
     header{
         position: fixed;
         width: 100%;
@@ -93,7 +92,6 @@ body{
                     margin: auto;
                     text-align: center;
                     h1{
-                        // font-family: "font-logo";
                         font-size: 65px;
                         padding-bottom: 50px;
                     }
@@ -139,17 +137,39 @@ body{
                 width: 80%;
                 margin: 0px auto;
                 a{
-                    div{
-                        margin: 0px 10px;
-                        padding: 50px 0px;
-                        text-align: center;
-                        border: 1px solid $pageColor;
-                        color: $pageColor;
+                .carouselItem{
+                            position: absolute;
+                            z-index: 1;
+                            margin: 0px 10px;
+                            text-align: center;
+                            border: 1px solid $pageColor;
+                            color: $pageColor;
+                            position: relative;
+                        .artistName{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: none;
+                            p{
+                                padding: 100px 0px;
+                            }
+                        }
+                        :hover{
+                            background-color: rgba($color: $pageColor, $alpha: 0.5);;
+                            color: $whiteLetters;
+                            height: 100%;
+                            transition: 0.5s ease-out;
+                        }
+                    }
+                    img{
+                        width: 100%;
                     }
                     :hover{
-                        background-color: $pageColor;
-                        color: $whiteLetters;
-                        transition: 0.5s ease-out;
+                        .artistName{
+                            display:block;
+                        }
                     }
                 }
             }
@@ -160,11 +180,12 @@ body{
             @include fleks-around();
             .newsArticle{
                 width: 30%;
+                height: 0%;
                 margin: 10px 0px;
                 border-radius: 15px;
                 background-color: $pageColor;
                 color: $whiteLetters;
-                box-shadow: 4px 3px rgba($color: $pageColor, $alpha: 0.5);
+                box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
                 h2,p,span{
                     margin-left: 10px;
                 }
@@ -179,6 +200,27 @@ body{
                 img{
                     width: 100%;
                     border-radius: 15px 15px 0px 0px;
+                }
+            }
+        }
+        // contact page
+        .container{
+            width: 80%;
+            margin: 0px auto;
+            padding: 200px 0px;
+            @include fleks-around;
+            .logoSredina, .forma{
+                width: 30%;
+            }
+            .forma{
+                border-radius: 15px;
+                border: 1px solid $pageColor;  
+                box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
+            }
+            .logoSredina{
+                text-align: center;
+                img{
+                    width: 100%;
                 }
             }
         }
@@ -310,6 +352,47 @@ body{
                     img{
                         width: 70%;
                         margin: auto;
+                    }
+                }
+            }
+            .carousel{
+                .center{
+                    width: 100%;
+                    a{
+                    .carouselItem{
+                                position: absolute;
+                                z-index: 1;
+                                margin: 0px 10px;
+                                text-align: center;
+                                border: 1px solid $pageColor;
+                                color: $pageColor;
+                                position: relative;
+                            .artistName{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: none;
+                                p{
+                                    padding: 100px 0px;
+                                }
+                            }
+                            :hover{
+                                background-color: rgba($color: $pageColor, $alpha: 0.5);;
+                                color: $whiteLetters;
+                                height: 100%;
+                                transition: 0.5s ease-out;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                        }
+                        :hover{
+                            .artistName{
+                                display:block;
+                            }
+                        }
                     }
                 }
             }
