@@ -126,8 +126,12 @@ body main .cover .welcomeText .contentText h1 {
   padding-bottom: 50px;
 }
 
-body main .cover .welcomeText .contentText p, body main .cover .welcomeText .contentText span {
+body main .cover .welcomeText .contentText p {
   font-size: 30px;
+}
+
+body main .cover .welcomeText .contentText span {
+  font-size: 50px;
 }
 
 body main .cover .welcomeText .contentText a button {
@@ -152,29 +156,30 @@ body main .cover .picture img {
   width: 100%;
 }
 
-body main .carousel {
+body main .carouselBlock {
   width: 100%;
   border-top: 1px solid #121212;
   border-bottom: 1px solid #121212;
   text-align: center;
   padding-bottom: 50px;
+  background-color: #121212;
+  color: #FFFFFF;
 }
 
-body main .carousel .carouselHeading {
+body main .carouselBlock .carouselHeading {
   padding: 50px 0px;
 }
 
-body main .carousel .center {
+body main .carouselBlock .carousel {
   width: 75%;
   margin: 0px auto;
 }
 
-body main .carousel .center a .carouselItem {
+body main .carouselBlock .carousel a .carouselItem {
   width: 50%;
   z-index: 1;
   margin: 0px auto;
   text-align: center;
-  border: 1px solid #121212;
   border-radius: 15px;
   color: #121212;
   position: relative;
@@ -182,7 +187,7 @@ body main .carousel .center a .carouselItem {
           box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
 }
 
-body main .carousel .center a .carouselItem .artistName {
+body main .carouselBlock .carousel a .carouselItem .artistName {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -191,26 +196,27 @@ body main .carousel .center a .carouselItem .artistName {
   display: none;
 }
 
-body main .carousel .center a .carouselItem .artistName p {
+body main .carouselBlock .carousel a .carouselItem .artistName p {
   padding: 90px 0px;
 }
 
-body main .carousel .center a img {
+body main .carouselBlock .carousel a img {
   width: 100%;
   border-radius: 15px;
 }
 
-body main .carousel .center a :hover {
+body main .carouselBlock .carousel a :hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-body main .carousel .center a :hover .artistName {
+body main .carouselBlock .carousel a :hover .artistName {
   display: block;
   border-radius: 15px;
   background-color: rgba(18, 18, 18, 0.5);
   color: #FFFFFF;
   height: 100%;
+  cursor: pointer;
 }
 
 body main #news {
@@ -579,13 +585,5 @@ body #footer .copyright :hover {
     padding: 10px 20px;
     font-size: 10px;
   }
-}
-
-.slick-prev.slick-arrow:before {
-  color: #121212;
-}
-
-.slick-next.slick-arrow:before {
-  color: #121212;
 }
 /*# sourceMappingURL=style.css.map */

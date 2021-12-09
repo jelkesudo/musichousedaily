@@ -96,8 +96,11 @@ body{
                         font-size: 65px;
                         padding-bottom: 50px;
                     }
-                    p, span{
+                    p{
                         font-size: 30px;
+                    }
+                    span{
+                        font-size: 50px;
                     }
                     a{
                         button{
@@ -125,16 +128,18 @@ body{
                 }
             }
         }
-        .carousel{
+        .carouselBlock{
             width: 100%;
             border-top: 1px solid $pageColor;
             border-bottom: 1px solid $pageColor;
             text-align: center;
             padding-bottom: 50px;
+            background-color: $pageColor;
+            color: $whiteLetters;
             .carouselHeading{
                 padding: 50px 0px;
             }
-            .center{
+            .carousel{
                 width: 75%;
                 margin: 0px auto;
                 a{
@@ -143,7 +148,6 @@ body{
                     z-index: 1;
                     margin: 0px auto;
                     text-align: center;
-                    border: 1px solid $pageColor;
                     border-radius: 15px;
                     color: $pageColor;
                     position: relative;
@@ -172,6 +176,7 @@ body{
                             background-color: rgba($color: $pageColor, $alpha: 0.5);
                             color: $whiteLetters;
                             height: 100%;
+                            cursor: pointer;
                         }
                     }
                 }
@@ -541,12 +546,3 @@ body{
         }
     }
 }
-
-//carousel arrow colors
-
-.slick-prev.slick-arrow:before {
-    color: $pageColor;
-  }
-  .slick-next.slick-arrow:before {
-    color: $pageColor;
-  }

@@ -1,6 +1,6 @@
 // changing title on the start of the index page
 
-var title = ["music", "artists", "playlists"];
+var title = ["music", "artists", "news"];
 
 let spanTitle = document.querySelector('.contentText span');
 
@@ -13,12 +13,14 @@ function changeHeading(){
   }
 }
 
+setInterval(changeHeading, 2000);
+
 //end of changing title on the start of the index page
 
 //carousel
 
 $(document).ready(function(){
-  $('.center').slick({
+  $('.carousel').slick({
       centerMode: true,
       centerPadding: '60px',
       slidesToShow: 4,
