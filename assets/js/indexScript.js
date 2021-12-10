@@ -19,8 +19,8 @@ setInterval(changeHeading, 2000);
 
 //carousel
 
-let names = ["Drake", "Rihanna", "Ye", "The Weekend", "Billie Eilish", "Eminem"];
-let namesPictures = ["drake", "rihanna", "kanye", "weekend", "billie", "eminem"];
+let names = ["Show All", "Drake", "Rihanna", "Ye", "The Weekend", "Billie Eilish", "Eminem"];
+let namesPictures = ["all", "drake", "rihanna", "kanye", "weekend", "billie", "eminem"];
 
 let carouselBlock = document.getElementById("carouselBlock");
 let artistCarousel = document.createElement("div");
@@ -227,6 +227,7 @@ for(let i = 0; i < aArrayID.length; i++){
 function filterSelection(c/*namesPicture*/) {
   var x, i;
   x = document.getElementsByClassName("newsArticle");
+  if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");

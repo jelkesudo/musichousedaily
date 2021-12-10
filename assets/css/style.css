@@ -440,7 +440,7 @@ body main .containerAuthor {
 }
 
 body main .containerAuthor .authorImage, body main .containerAuthor .authorText {
-  width: 30%;
+  width: 48%;
 }
 
 body main .containerAuthor .authorImage {
@@ -586,7 +586,7 @@ body #footer .copyright :hover {
   }
   body main .container {
     width: 90%;
-    padding: 50px 0px;
+    padding: 100px 0px;
   }
   body main .container .logoSredina, body main .container .forma {
     width: 100%;
@@ -616,6 +616,26 @@ body #footer .copyright :hover {
   }
   body main .container .forma .around .error {
     width: 100%;
+  }
+  body main .containerAuthor {
+    padding: 100px 0px;
+  }
+  body main .containerAuthor .authorImage, body main .containerAuthor .authorText {
+    width: 100%;
+  }
+  body main .containerAuthor .authorText {
+    padding-top: 50px;
+  }
+  body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
+    color: #1a73da;
+  }
+  body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
+    color: #ce5f15;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body main .containerAuthor .authorText h2 {
+    padding-bottom: 20px;
   }
 }
 
@@ -672,6 +692,38 @@ body #footer .copyright :hover {
     padding: 10px 0px;
     font-size: 18px;
   }
+  body main .container {
+    padding: 50px 0px;
+  }
+  body main .container .logoSredina, body main .container .forma {
+    width: 100%;
+  }
+  body main .container .logoSredina {
+    display: none;
+  }
+  body main .container .forma .around {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .container .forma .around div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+  }
+  body main .container .forma .around .error {
+    width: 100%;
+  }
   body #footer ul {
     width: 100%;
     margin-left: 20px;
@@ -703,6 +755,38 @@ body #footer .copyright :hover {
     margin-top: 30px;
     padding: 10px 20px;
     font-size: 12px;
+  }
+  body main .containerAuthor {
+    width: 90%;
+    margin: 0px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 50px 0px;
+  }
+  body main .containerAuthor .authorImage, body main .containerAuthor .authorText {
+    width: 100%;
+  }
+  body main .containerAuthor .authorImage {
+    text-align: center;
+    border-radius: 15px;
+  }
+  body main .containerAuthor .authorImage img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
+    color: #1a73da;
+  }
+  body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
+    color: #ce5f15;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 

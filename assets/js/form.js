@@ -39,7 +39,7 @@ let errors = classes("error");
 var numberMistakes;
 
 //regex check for email and nickname
-let nicknameRegexCheck = /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,20}[0-9]{1,5}$/;
+let nicknameRegexCheck = /^[A-Z]{1,20}[a-z0-9]{1,20}$/;
 let emailRegexCheck = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
 let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
 
@@ -62,7 +62,7 @@ form.addEventListener("reset", (e) => {
 });
 
 let write = (id, i, message) => {
-    if (id.value.trim() == "" || id != nicknameRegexCheck) {
+    if (id.value == "" || id != nicknameRegexCheck) {
       errors[i].innerHTML = message;
       numberMistakes++;
     } else errors[i].innerHTML = "";

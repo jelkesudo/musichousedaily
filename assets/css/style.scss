@@ -299,6 +299,7 @@ body{
             }
         }
         // end of contact page
+
         // author page
         .containerAuthor{
             width: 80%;
@@ -306,7 +307,7 @@ body{
             @include fleks-center;
             padding: 200px 0px;
             .authorImage, .authorText{
-                width: 30%;
+                width: 48%;
             }
             .authorImage{
                 text-align: center;
@@ -326,7 +327,6 @@ body{
                     }
                 }
             }
-            
         }
         // end of author page
     }
@@ -479,9 +479,11 @@ body{
                     }
                 }
             }
+        
+        // contact page
             .container{
             width: 90%;
-            padding: 50px 0px;
+            padding: 100px 0px;
             .logoSredina, .forma{
                 width: 100%;
             }
@@ -503,7 +505,28 @@ body{
             }
         }
         // end of contact page
-
+        .containerAuthor{
+            padding: 100px 0px;
+            .authorImage, .authorText{
+                width: 100%;
+            }
+            .authorText{
+                padding-top: 50px;
+                h2,p{
+                    a{
+                        color: $assetsBlue;
+                    }
+                    :hover{
+                        color: rgb(206, 95, 21);
+                        transition: 0.5s;
+                    }
+                }
+                h2{
+                    padding-bottom: 20px;
+                }
+            }
+            
+        }
         }
     }
 }
@@ -569,6 +592,30 @@ body{
                     }
                 }
             }
+            // contact page
+            .container{
+                padding: 50px 0px;
+                .logoSredina, .forma{
+                    width: 100%;
+                }
+                .logoSredina{
+                    display: none;
+                }
+                .forma{
+                    .around{
+                        @include fleks-around;
+                        div{
+                            @include fleks;
+                            align-items: center;
+                            width: 30%;
+                        }
+                        .error{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            // end of contact page
         }
         #footer{
             ul{
@@ -620,6 +667,36 @@ body{
                     }
                 }
             }
+            // author page
+            .containerAuthor{
+                width: 90%;
+                margin: 0px auto;
+                @include fleks-center;
+                padding: 50px 0px;
+                .authorImage, .authorText{
+                    width: 100%;
+                }
+                .authorImage{
+                    text-align: center;
+                    border-radius: 15px;
+                    img{
+                        width: 100%;
+                        border-radius: 15px;
+                    }
+                }
+                .authorText{
+                    h2,p{
+                        a{
+                            color: $assetsBlue;
+                        }
+                        :hover{
+                            color: rgb(206, 95, 21);
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            // end of author page
         }
     }
 }

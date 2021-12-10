@@ -49,7 +49,9 @@ for(let i = 0; i < footerContent.length; i++){
         if(i != 2){
             var aFooter = document.createElement("a");
             aFooter.setAttribute("href", `${footerContent[i][j + 3]}`);
-            aFooter.setAttribute("target", "_blank");
+            if(i == 1){
+                aFooter.setAttribute("target", "_blank");
+            }
             aFooter.appendChild(contentFooter);
             liFooter.appendChild(aFooter);
         }
