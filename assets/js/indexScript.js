@@ -101,7 +101,7 @@ let newsTitles = ["Kanye drops new album \"Donda\"",
                     "Kim and Ye divorce after 6 years of marriage", 
                     "Eminem released a new album", 
                     "Billie Eilish has a fragerance!!!", 
-                    "Weekend shedueled for November 2022", 
+                    "Weekend tour shedueled for November 2022", 
                     "\"Bad guy\" reaches 1 Billion streams", 
                     "Title9",
                     "Title10",
@@ -113,7 +113,7 @@ let newsCaption = ["Kanye climbed the leaderboar with his new album!",
                     "Kim needed someone who \"she can spend her life with\"", 
                     "After a long wait, we finnaly got it!", 
                     "Lorem ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet", 
+                    "It is right around the corner...", 
                     "Billie has reached an amaizing milestone", 
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet",
@@ -126,10 +126,10 @@ let newsPicture = ["kanye-chant.jpg",
                     "kim-and-kanye.jpg", 
                     "eminem-album.jpg", 
                     "billie-fragrance.jpg", 
-                    "kanye-chant.jpg",
+                    "weekend-concert.jpg",
                     "bad-guy-billie.jpg",
                     "kanye-chant.jpg",
-                    "kanye-chant.jpg",
+                    "weekend-concert.jpg",
                     "kanye-chant.jpg",
                     "kanye-chant.jpg"];
 let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
@@ -179,7 +179,7 @@ for(let i = 0; i < newsTitles.length; i++){
     readMore.appendChild(readMoreText);
     newNewsArticle.appendChild(readMore);
 
-    newNewsArticle.addEventListener("click", function(){
+    $(newNewsArticle).click(function(){
       var button = document.getElementById(`readMore${i}`);
       var additionalText = document.getElementById(`moreText${i}`);
       if(button.innerHTML == "Click/tap the box for more..."){

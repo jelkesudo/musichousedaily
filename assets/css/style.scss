@@ -234,14 +234,13 @@ body{
             @include fleks-between;
             .logoSredina, .forma{
                 width: 30%;
-                border: 1px solid black;
             }
             .fleks{
                 @include fleks;
                 justify-content: center;
             }
             .margin-auto{
-                margin: auto;
+                margin: auto 0px;
             }
             .forma{
                 h2{
@@ -272,6 +271,7 @@ body{
             .logoSredina{
                 text-align: center;
                 img{
+                    padding-top: 40px;
                     width: 100%;
                 }
             }

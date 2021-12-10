@@ -331,7 +331,6 @@ body main .container {
 
 body main .container .logoSredina, body main .container .forma {
   width: 30%;
-  border: 1px solid black;
 }
 
 body main .container .fleks {
@@ -346,7 +345,7 @@ body main .container .fleks {
 }
 
 body main .container .margin-auto {
-  margin: auto;
+  margin: auto 0px;
 }
 
 body main .container .forma h2 {
@@ -390,6 +389,7 @@ body main .container .logoSredina {
 }
 
 body main .container .logoSredina img {
+  padding-top: 40px;
   width: 100%;
 }
 
