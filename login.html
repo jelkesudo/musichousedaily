@@ -16,57 +16,50 @@
 
         </header>
         <main>
-            <div id="container" class="container">
-                <div id="login" class="forma flex margin-auto">
-                    <h2>Login</h2>
-                    <input type="text" placeholder="Your site nickname"/>
-                    <input type="password" placeholder="Password"/>
-                    <div class="fleks">
-                        <button>Login</button>
-                    </div>
-                </div>
+            <div id="container" class="container"> 
                 <div class="logoSredina">
                     <h1>Music House Daily</h1>
                     <img src="assets/img/headPhoneWhite.gif" alt="headphone logo"/>
                 </div>
-                <div id="register" class="forma">
+                <form id="register" class="forma">
                     <h2>Register</h2>
-                    <input type="text" placeholder="Your site nickname"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Confirm Password"/>
-                    <input type="email" placeholder="Enter E-mail"/>
-                    <div class="around">
-                        <select name="" id="">
-                            <option value="1">1</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="1">January</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="1">2003</option>
-                        </select>
-                    </div>
+                    <input id="nickname" type="text" placeholder="Your site nickname"/>
+                    <div class="error"></div>
+                    <input id="password" type="password" placeholder="Password"/>
+                    <div class="error"></div>
+                    <input id="passwordConfirm" type="password" placeholder="Confirm Password"/>
+                    <div class="error"></div>
+                    <input id="email" type="email" placeholder="Enter E-mail"/>
+                    <div class="error"></div>
                     <div class="around">
                         <div>
-                            <input type="radio" id="male" name="gender" value="Male"/><label for="male"> Male</label>
+                            <select name="day" id="day">
+                            </select>
+                            <div class="error"></div>
                         </div>
                         <div>
-                            <input type="radio" id="female" name="gender" value="Fale"/><label for="female"> Female</label>
+                            <select name="month" id="month">
+                            </select>
                         </div>
                         <div>
-                            <input type="radio" id="other" name="gender" value="Other"/><label for="other"> Other</label>
+                            <select name="year" id="year">
+                            </select>
+                            <div class="error"></div>
                         </div>
                     </div>
                     <div class="around">
-                        <button>Register</button>
-                        <button>Reset</button>
+                        <button id="registerButton">Register</button>
+                        <button type="reset">Reset</button>
                     </div>
-                </div>
+                    <div class="error"></div>
+                </form>
             </div>
         </main>
         <footer id="footer">
         
         </footer>
+        <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/form.js"></script>
     </body>
 </html>   

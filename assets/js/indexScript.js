@@ -103,8 +103,8 @@ let newsTitles = ["Kanye drops new album \"Donda\"",
                     "Billie Eilish has a fragerance!!!", 
                     "Weekend tour shedueled for November 2022", 
                     "\"Bad guy\" reaches 1 Billion streams", 
-                    "Title9",
-                    "Title10",
+                    "Jesus is king still on the top",
+                    "Drake withdraws Grammy 2022 nominations",
                     "Title11",
                     "Title12"];
 let newsCaption = ["Kanye climbed the leaderboar with his new album!", 
@@ -128,7 +128,7 @@ let newsPicture = ["kanye-chant.jpg",
                     "billie-fragrance.jpg", 
                     "weekend-concert.jpg",
                     "bad-guy-billie.jpg",
-                    "kanye-chant.jpg",
+                    "kanye-jeesus.jpg",
                     "weekend-concert.jpg",
                     "kanye-chant.jpg",
                     "kanye-chant.jpg"];
@@ -144,7 +144,7 @@ let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
-let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "", "", "", ""];
+let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "", ""];
 for(let i = 0; i < newsTitles.length; i++){
     let newNewsArticle = document.createElement("div");
     

@@ -322,9 +322,8 @@ body main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -370,18 +369,46 @@ body main .container .forma .around {
       flex-wrap: wrap;
 }
 
-body main .container .forma input[type=text], body main .container .forma input[type=email], body main .container .forma input[type=password] {
+body main .container .forma .around div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+body main .container .forma .around div select {
   width: 100%;
 }
 
-body main .container .forma select {
-  width: 30%;
+body main .container .forma .around div .error {
+  width: 100%;
+  font-size: 12px;
+}
+
+body main .container .forma input[type=text], body main .container .forma input[type=email], body main .container .forma input[type=password] {
+  width: 100%;
 }
 
 body main .container .forma button {
   width: 40%;
   padding: 10px 5px;
   background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+body main .container .error {
+  font-size: 12px;
+  margin-top: 2px;
+  color: red;
+}
+
+body main .container .empty {
+  display: none;
 }
 
 body main .container .logoSredina {

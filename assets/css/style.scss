@@ -148,27 +148,27 @@ body{
                 width: 75%;
                 margin: 0px auto;
                 a{
-                .carouselItem{
-                    width: 50%;
-                    z-index: 1;
-                    margin: 0px auto;
-                    text-align: center;
-                    border-radius: 15px;
-                    color: $pageColor;
-                    position: relative;
-                    box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
-                    .artistName{
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: none;
-                        p{
-                            padding: 90px 0px;
+                    .carouselItem{
+                        width: 50%;
+                        z-index: 1;
+                        margin: 0px auto;
+                        text-align: center;
+                        border-radius: 15px;
+                        color: $pageColor;
+                        position: relative;
+                        box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
+                        .artistName{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: none;
+                            p{
+                                padding: 90px 0px;
+                            }
                         }
                     }
-                }
                     img{
                         width: 100%;
                         border-radius: 15px;
@@ -231,7 +231,7 @@ body{
             width: 80%;
             margin: 0px auto;
             padding: 200px 0px;
-            @include fleks-between;
+            @include fleks-around;
             .logoSredina, .forma{
                 width: 30%;
             }
@@ -255,18 +255,36 @@ body{
                 }
                 .around{
                     @include fleks-around;
+                    div{
+                        @include fleks;
+                        align-items: center;
+                        width: 30%;
+                        select{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            font-size: 12px;
+                        }
+                    }
                 }
                 input[type=text], input[type=email], input[type=password]{
                     width: 100%;
-                }
-                select{
-                    width: 30%;
                 }
                 button{
                     width: 40%;
                     padding: 10px 5px;
                     background-color: $whiteLetters;
+                    cursor: pointer;
                 }
+            }
+            .error{
+                font-size: 12px;
+                margin-top: 2px;
+                color: red;
+            }
+            .empty{
+                display: none;
             }
             .logoSredina{
                 text-align: center;
@@ -277,7 +295,6 @@ body{
             }
         }
         // end of contact page
-
     }
     #footer{
         width: 100%;
