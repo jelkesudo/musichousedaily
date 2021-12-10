@@ -452,6 +452,10 @@ body main .containerAuthor .authorImage img {
   border-radius: 15px;
 }
 
+body main .containerAuthor .authorText {
+  padding: 100px 0px;
+}
+
 body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
   color: #1a73da;
 }
@@ -511,6 +515,37 @@ body #footer .copyright :hover {
   body main .cover .welcomeText .contentText p {
     font-size: 25px;
   }
+  body main .carouselBlock .carouselHeading {
+    padding: 50px 0px;
+  }
+  body main .carouselBlock #carousel {
+    width: 75%;
+    margin: 0px auto;
+  }
+  body main .carouselBlock #carousel a .carouselItem .artistName p {
+    padding: 100px 0px;
+  }
+  body main #news {
+    width: 80%;
+    margin: 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main #news .newsArticle h2 {
+    padding: 10px 0px;
+    font-size: 15px;
+  }
+  body main #news .newsArticle p {
+    font-size: 13px;
+  }
+  body main #news .newsArticle span {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -525,6 +560,16 @@ body #footer .copyright :hover {
   }
   body main .cover .welcomeText .contentText span {
     font-size: 27px;
+  }
+  body main .carouselBlock .carouselHeading {
+    padding: 50px 0px;
+  }
+  body main .carouselBlock #carousel {
+    width: 75%;
+    margin: 0px auto;
+  }
+  body main .carouselBlock #carousel a .carouselItem .artistName p {
+    padding: 60px 0px;
   }
 }
 
@@ -573,6 +618,22 @@ body #footer .copyright :hover {
     width: 70%;
     margin: auto;
   }
+  body main .carouselBlock .carouselHeading {
+    padding: 50px 0px;
+  }
+  body main .carouselBlock .carouselHeading h2 {
+    font-size: 20px;
+  }
+  body main .carouselBlock #carousel {
+    width: 75%;
+    margin: 0px auto;
+  }
+  body main .carouselBlock #carousel a .carouselItem {
+    width: 75%;
+  }
+  body main .carouselBlock #carousel a .carouselItem .artistName p {
+    padding: 100px 0px;
+  }
   body main #news .newsArticle {
     width: 48%;
   }
@@ -582,7 +643,13 @@ body #footer .copyright :hover {
   }
   body main #news .newsArticle h2 {
     padding: 10px 0px;
-    font-size: 18px;
+    font-size: 12px;
+  }
+  body main #news .newsArticle p {
+    font-size: 10px;
+  }
+  body main #news .newsArticle span {
+    font-size: 12px;
   }
   body main .container {
     width: 90%;
@@ -624,7 +691,8 @@ body #footer .copyright :hover {
     width: 100%;
   }
   body main .containerAuthor .authorText {
-    padding-top: 50px;
+    padding: 50px 0px;
+    padding-bottom: 0px;
   }
   body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
     color: #1a73da;
