@@ -3,8 +3,8 @@
 let navigation = document.createElement("nav");
 let redosled = document.createElement("ul");
 
-let pageName = ["Home", "Author", "Register"];
-let links = ["index.html", "author.html", "login.html",];
+let pageName = ["Home", "Register", "Author"];
+let links = ["index.html", "login.html", "author.html"];
 
 for(let i = 0; i < pageName.length; i++){
     var liChange = document.createElement("li");

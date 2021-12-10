@@ -445,19 +445,21 @@ body main .containerAuthor .authorImage, body main .containerAuthor .authorText 
 
 body main .containerAuthor .authorImage {
   text-align: center;
-  float: left;
+  border-radius: 15px;
 }
 
 body main .containerAuthor .authorImage img {
-  width: 50%;
+  border-radius: 15px;
 }
 
-body main .containerAuthor .authorText {
-  padding: 40px 0px;
+body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
+  color: #1a73da;
 }
 
-body main .containerAuthor .cleaner {
-  clear: both;
+body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
+  color: #ce5f15;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 body #footer {

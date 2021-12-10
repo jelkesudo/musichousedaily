@@ -310,17 +310,23 @@ body{
             }
             .authorImage{
                 text-align: center;
-                float: left;
+                border-radius: 15px;
                 img{
-                    width: 50%;
+                    border-radius: 15px;
                 }
             }
             .authorText{
-                padding: 40px 0px;
+                h2,p{
+                    a{
+                        color: $assetsBlue;
+                    }
+                    :hover{
+                        color: rgb(206, 95, 21);
+                        transition: 0.5s;
+                    }
+                }
             }
-            .cleaner{
-                clear: both;
-            }
+            
         }
         // end of author page
     }
