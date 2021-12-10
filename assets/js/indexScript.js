@@ -17,9 +17,6 @@ setInterval(changeHeading, 2000);
 
 //end of changing title on the start of the index page
 
-//sorting news
-let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "weekend", "eminem"];
-
 //carousel
 
 let names = ["Drake", "Rihanna", "Ye", "The Weekend", "Billie Eilish", "Eminem"];
@@ -33,9 +30,9 @@ for(artist in names){
   let anchorArtists = document.createElement("a");
   let artistDiv = document.createElement("div");
 
-  anchorArtists.setAttribute("id", `${namesPictures[artist]}`);
+  anchorArtists.setAttribute("class", `${namesPictures[artist]}`);
 
-  artistDiv.setAttribute("class", "carouselItem");
+  artistDiv.classList.add("carouselItem");
 
   let picture = document.createElement("img");
   picture.src = `assets/img/carousel/carousel_${namesPictures[artist]}.jpg`;
@@ -55,16 +52,19 @@ for(artist in names){
   anchorArtists.appendChild(artistDiv);
   artistCarousel.appendChild(anchorArtists);
 
-  anchorArtistsId = document.querySelector("a id");
 }
 
 carouselBlock.appendChild(artistCarousel);
+
+
+
+
 
 $(document).ready(function(){
   $('#carousel').slick({
       centerMode: true,
       centerPadding: '60px',
-      slidesToShow: 4,
+      slidesToShow: 3,
       autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
@@ -74,7 +74,7 @@ $(document).ready(function(){
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 3
+            slidesToShow: 2
           }
         },
         {
@@ -151,11 +151,17 @@ let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
+
+let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "weekend", "eminem"];
+
+let anchorArtistsId = artistCarousel.children;
+
 for(let i = 0; i < newsTitles.length; i++){
     let newNewsArticle = document.createElement("div");
     
-    newNewsArticle.setAttribute("class", `${sortNews[i]}`);
     newNewsArticle.setAttribute("class", "newsArticle");
+    newNewsArticle.classList.add(`${sortNews[i]}`);
+    newNewsArticle.classList.add("show");
 
     let newTitle = document.createElement("h2");
     newTitle.innerHTML = `${newsTitles[i]}`;
@@ -196,8 +202,54 @@ for(let i = 0; i < newsTitles.length; i++){
       }
       $(additionalText).toggle();
     });
-    
+
+
     news.appendChild(newNewsArticle);
 }
 
+let newsArticle = document.getElementById("news").children;
+
 // end of news
+
+//sort
+
+let aArrayID = Array.prototype.slice.call(anchorArtistsId, 0);
+
+let newsArticleID = Array.prototype.slice.call(newsArticle, 0);
+
+for(let i = 0; i < aArrayID.length; i++){
+  console.log(`${namesPictures[i]}`);
+  aArrayID[i].addEventListener("click", function(){
+    filterSelection(`${namesPictures[i]}`);
+  });
+}
+
+function filterSelection(c/*namesPicture*/) {
+  var x, i;
+  x = document.getElementsByClassName("newsArticle");
+  for (i = 0; i < x.length; i++) {
+    removeClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  }
+}
+
+function addClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function removeClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}

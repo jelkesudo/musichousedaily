@@ -241,6 +241,7 @@ body main #news .newsArticle {
   color: #FFFFFF;
   -webkit-box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
           box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
+  display: none;
 }
 
 body main #news .newsArticle h2, body main #news .newsArticle p, body main #news .newsArticle span {
@@ -313,6 +314,10 @@ body main #news .newsArticle #moreText10 {
 
 body main #news .newsArticle #moreText11 {
   display: none;
+}
+
+body main #news .show {
+  display: block;
 }
 
 body main .container {
