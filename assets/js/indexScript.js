@@ -49,20 +49,19 @@ for(artist in names){
 
   artistsName.appendChild(artistsNameP);
 
-  console.log(anchorArtists);
-
   artistDiv.appendChild(picture);
   artistDiv.appendChild(artistsName);
 
   anchorArtists.appendChild(artistDiv);
   artistCarousel.appendChild(anchorArtists);
-}
 
+  anchorArtistsId = document.querySelector("a id");
+}
 
 carouselBlock.appendChild(artistCarousel);
 
 $(document).ready(function(){
-  $('.carousel').slick({
+  $('#carousel').slick({
       centerMode: true,
       centerPadding: '60px',
       slidesToShow: 4,
@@ -91,11 +90,13 @@ $(document).ready(function(){
     });
 });
 
-
-
 //end of carousel
 
 // news
+
+function readMoreText(){
+
+}
 
 let news = document.querySelector("#news");
 
