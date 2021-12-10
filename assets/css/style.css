@@ -170,12 +170,12 @@ body main .carouselBlock .carouselHeading {
   padding: 50px 0px;
 }
 
-body main .carouselBlock .carousel {
+body main .carouselBlock #carousel {
   width: 75%;
   margin: 0px auto;
 }
 
-body main .carouselBlock .carousel a .carouselItem {
+body main .carouselBlock #carousel a .carouselItem {
   width: 50%;
   z-index: 1;
   margin: 0px auto;
@@ -187,7 +187,7 @@ body main .carouselBlock .carousel a .carouselItem {
           box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
 }
 
-body main .carouselBlock .carousel a .carouselItem .artistName {
+body main .carouselBlock #carousel a .carouselItem .artistName {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -196,21 +196,21 @@ body main .carouselBlock .carousel a .carouselItem .artistName {
   display: none;
 }
 
-body main .carouselBlock .carousel a .carouselItem .artistName p {
+body main .carouselBlock #carousel a .carouselItem .artistName p {
   padding: 90px 0px;
 }
 
-body main .carouselBlock .carousel a img {
+body main .carouselBlock #carousel a img {
   width: 100%;
   border-radius: 15px;
 }
 
-body main .carouselBlock .carousel a :hover {
+body main .carouselBlock #carousel a :hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-body main .carouselBlock .carousel a :hover .artistName {
+body main .carouselBlock #carousel a :hover .artistName {
   display: block;
   border-radius: 15px;
   background-color: rgba(18, 18, 18, 0.5);

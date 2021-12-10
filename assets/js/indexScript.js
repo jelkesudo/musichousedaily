@@ -27,7 +27,7 @@ let namesPictures = ["drake", "rihanna", "kanye", "weekend", "billie", "eminem"]
 
 let carouselBlock = document.getElementById("carouselBlock");
 let artistCarousel = document.createElement("div");
-artistCarousel.setAttribute("class", "carousel");
+artistCarousel.setAttribute("id", "carousel");
 
 for(artist in names){
   let anchorArtists = document.createElement("a");
@@ -56,9 +56,8 @@ for(artist in names){
 
   anchorArtists.appendChild(artistDiv);
   artistCarousel.appendChild(anchorArtists);
-
-  anchorArtistsId = document.querySelector("a id");
 }
+
 
 carouselBlock.appendChild(artistCarousel);
 
