@@ -17,6 +17,9 @@ setInterval(changeHeading, 2000);
 
 //end of changing title on the start of the index page
 
+//sorting news
+let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "weekend", "eminem"];
+
 //carousel
 
 let names = ["Drake", "Rihanna", "Ye", "The Weekend", "Billie Eilish", "Eminem"];
@@ -46,11 +49,15 @@ for(artist in names){
 
   artistsName.appendChild(artistsNameP);
 
+  console.log(anchorArtists);
+
   artistDiv.appendChild(picture);
   artistDiv.appendChild(artistsName);
 
   anchorArtists.appendChild(artistDiv);
   artistCarousel.appendChild(anchorArtists);
+
+  anchorArtistsId = document.querySelector("a id");
 }
 
 carouselBlock.appendChild(artistCarousel);
@@ -85,13 +92,11 @@ $(document).ready(function(){
     });
 });
 
+
+
 //end of carousel
 
 // news
-
-function readMoreText(){
-
-}
 
 let news = document.querySelector("#news");
 
@@ -103,10 +108,11 @@ let newsTitles = ["Kanye drops new album \"Donda\"",
                     "Billie Eilish has a fragerance!!!", 
                     "Weekend tour shedueled for November 2022", 
                     "\"Bad guy\" reaches 1 Billion streams", 
-                    "Jesus is king still on the top",
+                    "\"Jesus is king\" still on the top",
                     "Drake withdraws Grammy 2022 nominations",
-                    "Title11",
+                    "\"Blinding lights\" song of the decade?",
                     "Title12"];
+
 let newsCaption = ["Kanye climbed the leaderboar with his new album!", 
                     "Rihanna being honored in her home country!", 
                     "Certified Lover Boy hits top charts!", 
@@ -115,7 +121,7 @@ let newsCaption = ["Kanye climbed the leaderboar with his new album!",
                     "Lorem ipsum dolor sit amet", 
                     "It is right around the corner...", 
                     "Billie has reached an amaizing milestone", 
-                    "Lorem ipsum dolor sit amet",
+                    "kanye",
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet" ];
@@ -129,9 +135,10 @@ let newsPicture = ["kanye-chant.jpg",
                     "weekend-concert.jpg",
                     "bad-guy-billie.jpg",
                     "kanye-jeesus.jpg",
-                    "weekend-concert.jpg",
-                    "kanye-chant.jpg",
+                    "drake-gramy.jpg",
+                    "blinding-lights.jpg",
                     "kanye-chant.jpg"];
+
 let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
                     "\"May you continue to shine like a diamond\", the countrys prime minister, Mia Mottley, said at an investiture ceremony for the pop singer, fashion icon and entrepreneur, in reference to her 2012 hit Diamonds.", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
@@ -144,7 +151,6 @@ let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
-let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "", ""];
 for(let i = 0; i < newsTitles.length; i++){
     let newNewsArticle = document.createElement("div");
     

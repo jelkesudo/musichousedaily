@@ -50,25 +50,39 @@ form.addEventListener("submit", (e) => {
     write(password, 1, "Your password cannot be like that lol");
     write(passwordConfirm, 2, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
-    yearsCheckFebruary(day, month, year, "Invalid date for the month", "Invalid date in february");
+    yearsCheckFebruary(day, month, year, "Invalid date for the month", "Invalid date in February");
     yearsCheck(year, "You must be over 16 years");
     if (numberMistakes == 0){
         alert("Sucesfull registration");
-        setTimeout("location.reload(true);",0)
+        setTimeout("location.reload(true);",0);
     }
 });
 
 form.addEventListener("reset", (e) => {
-    for(let i = 0; i < 7; i++){
-        error[i].innerHTML = "";
-    }
+    setTimeout("location.reload(true);",0);
 });
 
-let write = (id, i, message) => {
-  if (id.value == "" || id.value != nicknameRegexCheck) {
-    errors[i].innerHTML = message;
-    numberMistakes++;
-  } else errors[i].innerHTML = "";
+let write = (day, month, year, message1, message2) => {
+    var daysNumber = 0;
+    switch(day.value){
+        case "January", "March", "May", "July", "August", "October", "December": daysNumber = 31; break;
+        case "April", "June", "September", "November": daysNumber = 30; break;
+        default: daysNumber = 28;
+    }
+    if(parseInt(year.value) % 4 == 0){
+        daysNumber = 29;
+    }
+    if(day.value > daysNumber){
+        errors[4].innerHTML = message1;
+        numberMistakes++;
+    }
+    if (parseInt(day.value) > 29 && month.value == "February") {
+        errors[4].innerHTML = message2;
+        numberMistakes++;
+    } 
+    else {
+        errors[4].innerHTML = "";
+    }
 };
 
 let emailCheck = (id, message) => {
@@ -78,11 +92,16 @@ let emailCheck = (id, message) => {
     } else errors[3].innerHTML = "";
   };
 
-let yearsCheck = (id, message) => {
+let yearsCheckFebruary = (id, message) => {
     if (id.value > "2003") {
       errors[5].innerHTML = message;
       numberMistakes++;
     } else errors[5].innerHTML = "";
 };
 
-
+let yearsCheck = (id, message) => {
+    if (id.value > "2003") {
+      errors[5].innerHTML = message;
+      numberMistakes++;
+    } else errors[5].innerHTML = "";
+};
