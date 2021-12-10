@@ -3,7 +3,7 @@
 let navigation = document.createElement("nav");
 let redosled = document.createElement("ul");
 
-let pageName = ["Home", "Author", "Login || Register"];
+let pageName = ["Home", "Author", "Register"];
 let links = ["index.html", "author.html", "login.html",];
 
 for(let i = 0; i < pageName.length; i++){
@@ -36,7 +36,7 @@ headMenu.appendChild(navigation);
 let futer = document.getElementById("footer");
 
 var footerContent = [
-    ["Home", "Author", "Login || Register", "index.html", "author.html", "login.html"],
+    ["Home", "Author", "Register", "index.html", "author.html", "login.html"],
     ["Facebook", "Instagram", "Twitter", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/"],
     ["Call center: +38163 45 67 890", "Adress: Zdravka Celara 16", "Work time for call center: 08am - 04pm"]
 ]

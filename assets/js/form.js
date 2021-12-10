@@ -40,14 +40,14 @@ var numberMistakes;
 
 //regex check for email and nickname
 let nicknameRegexCheck = /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,20}[0-9]{1,5}$/;
-let emailRegexCheck = /^[a-zA-Z0-9]([a-z]|[0-9])+.?-?_?([a-z]|[0-9]).?([az]|[0-9])@[a-z]{3,}.([a-z]{2,4}.)?([a-z]{2,4})$/g;
-let passwordRegexCheck = /^[A-Z0-9][a-z0-9]{5,20}$/;
+let emailRegexCheck = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
 
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
     write(nickname, 0, "Your nickname is invalid, example: Timmy123, Tody457..");
-    write(password, 1, "Your password cannot be like that");
+    write(password, 1, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
     write(passwordConfirm, 2, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
     yearsCheck(year, "You must be over 16 years");
@@ -62,14 +62,14 @@ form.addEventListener("reset", (e) => {
 });
 
 let write = (id, i, message) => {
-    if (id.value.trim() == "") {
+    if (id.value.trim() == "" || id != nicknameRegexCheck) {
       errors[i].innerHTML = message;
       numberMistakes++;
     } else errors[i].innerHTML = "";
   };
 
 let emailCheck = (id, message) => {
-    if (id.value == "") {
+    if (id.value == "" || id != emailRegexCheck) {
       errors[3].innerHTML = message;
       numberMistakes++;
     } else errors[3].innerHTML = "";
