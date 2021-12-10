@@ -425,6 +425,41 @@ body main .container .logoSredina img {
   width: 100%;
 }
 
+body main .containerAuthor {
+  width: 80%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 200px 0px;
+}
+
+body main .containerAuthor .authorImage, body main .containerAuthor .authorText {
+  width: 30%;
+}
+
+body main .containerAuthor .authorImage {
+  text-align: center;
+  float: left;
+}
+
+body main .containerAuthor .authorImage img {
+  width: 50%;
+}
+
+body main .containerAuthor .authorText {
+  padding: 40px 0px;
+}
+
+body main .containerAuthor .cleaner {
+  clear: both;
+}
+
 body #footer {
   width: 100%;
   display: -webkit-box;
@@ -549,44 +584,13 @@ body #footer .copyright :hover {
   }
   body main .container {
     width: 90%;
-    margin: 0px auto;
-    padding: 200px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    padding: 50px 0px;
   }
   body main .container .logoSredina, body main .container .forma {
     width: 100%;
   }
   body main .container .logoSredina {
     display: none;
-  }
-  body main .container .fleks {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body main .container .margin-auto {
-    margin: auto 0px;
-  }
-  body main .container .forma h2 {
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  body main .container .forma input[type=text], body main .container .forma input[type=password], body main .container .forma input[type=email], body main .container .forma select, body main .container .forma button {
-    border-radius: 7px;
-    padding: 10px 5px;
-    margin: 15px 0px;
-    border: 1px solid #1a73da;
   }
   body main .container .forma .around {
     display: -webkit-box;
@@ -606,6 +610,9 @@ body #footer .copyright :hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 30%;
+  }
+  body main .container .forma .around .error {
     width: 100%;
   }
 }
