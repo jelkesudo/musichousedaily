@@ -165,7 +165,7 @@ body{
                             left: 0;
                             display: none;
                             p{
-                                padding: 90px 0px;
+                                padding: 120px 0px;
                             }
                         }
                     }
@@ -449,6 +449,46 @@ body{
                     }
                 }
             }
+            .container{
+            width: 90%;
+            margin: 0px auto;
+            padding: 200px 0px;
+            @include fleks-around;
+            .logoSredina, .forma{
+                width: 100%;
+            }
+            .logoSredina{
+                display: none;
+            }
+            .fleks{
+                @include fleks;
+                justify-content: center;
+            }
+            .margin-auto{
+                margin: auto 0px;
+            }
+            .forma{
+                h2{
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                input[type=text], input[type=password], input[type=email], select, button{
+                    border-radius: 7px;
+                    padding: 10px 5px;
+                    margin: 15px 0px;
+                    border: 1px solid $assetsBlue;
+                }
+                .around{
+                    @include fleks-around;
+                    div{
+                        @include fleks;
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        // end of contact page
         }
     }
 }
