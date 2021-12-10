@@ -19,8 +19,8 @@ setInterval(changeHeading, 2000);
 
 //carousel
 
-let names = ["Drake", "Rihanna", "Kanye West", "The Weekend", "Billie Eilish", "Idk2"];
-let namesPictures = ["drake", "rihanna", "kanye", "weekend", "billie", "weekend"];
+let names = ["Drake", "Rihanna", "Ye", "The Weekend", "Billie Eilish", "Eminem"];
+let namesPictures = ["drake", "rihanna", "kanye", "weekend", "billie", "eminem"];
 
 let carouselBlock = document.getElementById("carouselBlock");
 let artistCarousel = document.createElement("div");
@@ -98,23 +98,23 @@ let news = document.querySelector("#news");
 let newsTitles = ["Kanye drops new album \"Donda\"", 
                     "Rihanna named 11th national hero of Barbados", 
                     "Drake's new album just got out", 
-                    "Title4", 
-                    "Title5", 
-                    "Title6", 
-                    "Title7", 
-                    "Title8", 
+                    "Kim and Ye divorce after 6 years of marriage", 
+                    "Eminem released a new album", 
+                    "Billie Eilish has a fragerance!!!", 
+                    "Weekend shedueled for November 2022", 
+                    "\"Bad guy\" reaches 1 Billion streams", 
                     "Title9",
                     "Title10",
                     "Title11",
                     "Title12"];
-let newsCaption = ["Kanye climbed the leaderboar with his new album", 
-                    "Rihanna being honored a new title", 
-                    "Certified Lover Boy hits top charts", 
+let newsCaption = ["Kanye climbed the leaderboar with his new album!", 
+                    "Rihanna being honored in her home country!", 
+                    "Certified Lover Boy hits top charts!", 
+                    "Kim needed someone who \"she can spend her life with\"", 
+                    "After a long wait, we finnaly got it!", 
                     "Lorem ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet", 
+                    "Billie has reached an amaizing milestone", 
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet",
@@ -123,17 +123,17 @@ let newsCaption = ["Kanye climbed the leaderboar with his new album",
 let newsPicture = ["kanye-chant.jpg", 
                     "rihanna-barbados.jpg",
                     "drake-clb.jpg",
-                    "kanye-chant.jpg", 
-                    "kanye-chant.jpg", 
-                    "kanye-chant.jpg", 
+                    "kim-and-kanye.jpg", 
+                    "eminem-album.jpg", 
+                    "billie-fragrance.jpg", 
                     "kanye-chant.jpg",
-                    "kanye-chant.jpg",
+                    "bad-guy-billie.jpg",
                     "kanye-chant.jpg",
                     "kanye-chant.jpg",
                     "kanye-chant.jpg",
                     "kanye-chant.jpg"];
 let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+                    "\"May you continue to shine like a diamond\", the countrys prime minister, Mia Mottley, said at an investiture ceremony for the pop singer, fashion icon and entrepreneur, in reference to her 2012 hit Diamonds.", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
@@ -144,9 +144,11 @@ let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor 
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
                     "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
-
+let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "", "", "", ""];
 for(let i = 0; i < newsTitles.length; i++){
     let newNewsArticle = document.createElement("div");
+    
+    newNewsArticle.setAttribute("class", `${sortNews[i]}`);
     newNewsArticle.setAttribute("class", "newsArticle");
 
     let newTitle = document.createElement("h2");

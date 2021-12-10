@@ -234,8 +234,9 @@ body main #news {
 body main #news .newsArticle {
   width: 30%;
   height: 0%;
-  margin: 10px 0px;
+  margin: 25px 0px;
   border-radius: 15px;
+  border: 1px solid #121212;
   background-color: #121212;
   color: #FFFFFF;
   -webkit-box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
@@ -321,21 +322,67 @@ body main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 body main .container .logoSredina, body main .container .forma {
   width: 30%;
+  border: 1px solid black;
 }
 
-body main .container .forma {
-  border-radius: 15px;
-  border: 1px solid #121212;
-  -webkit-box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
-          box-shadow: 5px 5px 0 rgba(18, 18, 18, 0.2);
+body main .container .fleks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .container .margin-auto {
+  margin: auto;
+}
+
+body main .container .forma h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+body main .container .forma input[type=text], body main .container .forma input[type=password], body main .container .forma input[type=email], body main .container .forma select, body main .container .forma button {
+  border-radius: 7px;
+  padding: 10px 5px;
+  margin: 15px 0px;
+  border: 1px solid #1a73da;
+}
+
+body main .container .forma .around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .container .forma input[type=text], body main .container .forma input[type=email], body main .container .forma input[type=password] {
+  width: 100%;
+}
+
+body main .container .forma select {
+  width: 30%;
+}
+
+body main .container .forma button {
+  width: 40%;
+  padding: 10px 5px;
+  background-color: #FFFFFF;
 }
 
 body main .container .logoSredina {

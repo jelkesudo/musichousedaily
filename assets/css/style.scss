@@ -5,6 +5,10 @@ $assetsBlue: rgb(26, 115, 218);
     font-family: "br";
     src: url("../fonts/br.ttf");
 }
+@mixin fleks {
+    display: flex;
+    flex-wrap: wrap;
+}
 @mixin fleks-around {
     display: flex;
     justify-content: space-around;
@@ -190,8 +194,9 @@ body{
             .newsArticle{
                 width: 30%;
                 height: 0%;
-                margin: 10px 0px;
+                margin: 25px 0px;
                 border-radius: 15px;
+                border: 1px solid $pageColor;
                 background-color: $pageColor;
                 color: $whiteLetters;
                 box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
@@ -226,14 +231,43 @@ body{
             width: 80%;
             margin: 0px auto;
             padding: 200px 0px;
-            @include fleks-around;
+            @include fleks-between;
             .logoSredina, .forma{
                 width: 30%;
+                border: 1px solid black;
+            }
+            .fleks{
+                @include fleks;
+                justify-content: center;
+            }
+            .margin-auto{
+                margin: auto;
             }
             .forma{
-                border-radius: 15px;
-                border: 1px solid $pageColor;  
-                box-shadow: 5px 5px 0 rgba($color: $pageColor, $alpha: 0.2);
+                h2{
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                input[type=text], input[type=password], input[type=email], select, button{
+                    border-radius: 7px;
+                    padding: 10px 5px;
+                    margin: 15px 0px;
+                    border: 1px solid $assetsBlue;
+                }
+                .around{
+                    @include fleks-around;
+                }
+                input[type=text], input[type=email], input[type=password]{
+                    width: 100%;
+                }
+                select{
+                    width: 30%;
+                }
+                button{
+                    width: 40%;
+                    padding: 10px 5px;
+                    background-color: $whiteLetters;
+                }
             }
             .logoSredina{
                 text-align: center;
@@ -242,6 +276,8 @@ body{
                 }
             }
         }
+        // end of contact page
+
     }
     #footer{
         width: 100%;
