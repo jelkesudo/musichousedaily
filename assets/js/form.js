@@ -57,7 +57,7 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-form.addEventListener("reset", (e) => {
+form.addEventListener("reset", () => {
     setTimeout("location.reload(true);",0);
 });
 
@@ -72,7 +72,7 @@ let checkName = (id, i, message) => {
   };
 
 let passwordCheck = (id, i, message) =>{
-  if (!passwordRegexCheck.test(id.value)) {
+  if (id.value == "" || !passwordRegexCheck.test(id.value)) {
     errors[i].innerHTML = message;
     numberMistakes++;
   } 
