@@ -44,13 +44,13 @@ var numberMistakes;
 //regex check for email and nickname
 let nicknameRegexCheck = /^[A-Za-z]{1,20}[0-9]{3,20}$/;
 let emailRegexCheck = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
-let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+let passwordRegexCheck = /^[A-Za-z0-9]{5,20}$/;
 
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
     checkName(nickname, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
-    passwordCheck(password, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
+    passwordCheck(password, "Your password should be at least 5 characters long and contain letters and numbers");
     passwordConfirmCheck(password, passwordConfirm, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
     yearsCheck(year, "You must be over 16 years");
