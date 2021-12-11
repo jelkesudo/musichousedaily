@@ -68,10 +68,9 @@ for(let i = 0; i < footerContent.length; i++){
 
 futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div>';
 // adding copyright and link to the portfolio page
+// end of footer creation
 
-$("#backToTheTop").click(topFunction);
-
-// button scroll top - from w3schools
+$("#backToTheTop").click(toTop);
 
 mybutton = document.getElementById("backToTheTop");
 
@@ -79,15 +78,14 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+    mybutton.style.opacity = 1;
+    $(mybutton).fadeIn();
+  } 
+  else {
+    $(mybutton).fadeOut();
   }
 }
 
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
+function toTop() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-// end of button scroll top - from w3schools

@@ -375,6 +375,9 @@ body{
     transition: 0.5s;
     color: white;
     text-align: center;
+    opacity: 0;
+    transition: 0.1s;
+    cursor: pointer;
     i{
         padding: 10px 0px; 
     }

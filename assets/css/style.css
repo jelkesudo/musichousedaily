@@ -524,6 +524,10 @@ body #footer .copyright :hover {
   transition: 0.5s;
   color: white;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
 }
 
 #backToTheTop i {
