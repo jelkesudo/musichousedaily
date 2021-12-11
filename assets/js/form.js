@@ -46,7 +46,7 @@ let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
-    write(nickname, 0, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
+    checkName(nickname, 0, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
     passwordCheck(password, 1, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
     passwordConfirmCheck(password, passwordConfirm, 2, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
@@ -61,7 +61,7 @@ form.addEventListener("reset", (e) => {
     setTimeout("location.reload(true);",0);
 });
 
-let write = (id, i, message) => {
+let checkName = (id, i, message) => {
     if (!nicknameRegexCheck.test(id.value)) {
       errors[i].innerHTML = message;
       numberMistakes++;
