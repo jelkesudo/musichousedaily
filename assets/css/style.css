@@ -466,6 +466,10 @@ body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .au
   transition: 0.5s;
 }
 
+body main .containerAuthor .authorText h2 {
+  padding-bottom: 20px;
+}
+
 body #footer {
   width: 100%;
   display: -webkit-box;
@@ -701,9 +705,6 @@ body #footer .copyright :hover {
     color: #ce5f15;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-  }
-  body main .containerAuthor .authorText h2 {
-    padding-bottom: 20px;
   }
 }
 
