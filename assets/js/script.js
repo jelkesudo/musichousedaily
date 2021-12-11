@@ -38,7 +38,7 @@ let futer = document.getElementById("footer");
 var footerContent = [
     ["Home", "Author", "Register", "Documentation ", "index.html", "author.html", "login.html", ""],
     ["Facebook", "Instagram", "Twitter", "Dribble", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/", "https://dribbble.com/"],
-    ["Call center: +38163 45 67 890", "Adress: Zdravka Celara 16", "Work time for call center: 08am - 04pm"]
+    ["Call center: +38163 45 67 890", "Adress: Zdravka čelara 16", "Work time for call center: 08am - 04pm", "Music House Daily 2021"]
 ];
 
 for(let i = 0; i < footerContent.length; i++){
