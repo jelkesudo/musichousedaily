@@ -39,16 +39,16 @@ let errors = classes("error");
 var numberMistakes;
 
 //regex check for email and nickname
-let nicknameRegexCheck = /^[A-Z]{1,20}[a-z0-9]{1,20}$/;
+let nicknameRegexCheck = /^[A-Za-z]{1,20}[0-9]{3,20}$/;
 let emailRegexCheck = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
 let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
 
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
-    write(nickname, 0, "Your nickname is invalid, example: Timmy123, Tody457..");
-    write(password, 1, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
-    write(passwordConfirm, 2, "Passwords must match");
+    write(nickname, 0, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
+    passwordCheck(password, 1, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
+    passwordConfirmCheck(password, passwordConfirm, 2, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
     yearsCheck(year, "You must be over 16 years");
     if (numberMistakes == 0){
@@ -62,14 +62,37 @@ form.addEventListener("reset", (e) => {
 });
 
 let write = (id, i, message) => {
-    if (id.value == "" || id != nicknameRegexCheck) {
+    if (!nicknameRegexCheck.test(id.value)) {
       errors[i].innerHTML = message;
       numberMistakes++;
-    } else errors[i].innerHTML = "";
+    } 
+    else {
+      errors[i].innerHTML = "";
+    }
   };
 
+let passwordCheck = (id, i, message) =>{
+  if (!passwordRegexCheck.test(id.value)) {
+    errors[i].innerHTML = message;
+    numberMistakes++;
+  } 
+  else {
+    errors[i].innerHTML = "";
+  }
+}
+
+let passwordConfirmCheck = (id, id2, i, message) =>{
+  if (id.value != id2.value) {
+    errors[i].innerHTML = message;
+    numberMistakes++;
+  } 
+  else {
+    errors[i].innerHTML = "";
+  }
+}
+
 let emailCheck = (id, message) => {
-    if (id.value == "" || id != emailRegexCheck) {
+    if (!emailRegexCheck.test(id.value)) {
       errors[3].innerHTML = message;
       numberMistakes++;
     } else errors[3].innerHTML = "";
