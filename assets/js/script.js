@@ -36,7 +36,7 @@ headMenu.appendChild(navigation);
 let futer = document.getElementById("footer");
 
 var footerContent = [
-    ["Home", "Author", "Register", "Documentation ", "index.html", "author.html", "login.html", ""],
+    ["Home", "Author", "Register", "Documentation ", "index.html", "author.html", "login.html", "Dokumentacija.pdf"],
     ["Facebook", "Instagram", "Twitter", "Dribble", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/", "https://dribbble.com/"],
     ["Call center: +38163 45 67 890", "Adress: Zdravka čelara 16", "Work time for call center: 08am - 04pm", "Music House Daily 2021"]
 ];
@@ -48,13 +48,14 @@ for(let i = 0; i < footerContent.length; i++){
         var contentFooter = document.createTextNode(`${footerContent[i][j]}`);
         if(i != 2){
             var aFooter = document.createElement("a");
-            aFooter.setAttribute("href", `${footerContent[i][j + 3]}`);
+            aFooter.setAttribute("href", `${footerContent[i][j + 4]}`);
             if(i == 1){
                 aFooter.setAttribute("target", "_blank");
             }
             aFooter.appendChild(contentFooter);
             if(i == 0 && j == 3){
               aFooter.innerHTML += "<i class=\"fas fa-file-pdf\"></i>";
+              aFooter.setAttribute("target", "_blank");
             }
             liFooter.appendChild(aFooter);
         }
