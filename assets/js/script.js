@@ -36,14 +36,14 @@ headMenu.appendChild(navigation);
 let futer = document.getElementById("footer");
 
 var footerContent = [
-    ["Home", "Author", "Register", "index.html", "author.html", "login.html"],
-    ["Facebook", "Instagram", "Twitter", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/"],
+    ["Home", "Author", "Register", "Documentation ", "index.html", "author.html", "login.html", ""],
+    ["Facebook", "Instagram", "Twitter", "Dribble", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/", "https://dribbble.com/"],
     ["Call center: +38163 45 67 890", "Adress: Zdravka Celara 16", "Work time for call center: 08am - 04pm"]
-]
+];
 
 for(let i = 0; i < footerContent.length; i++){
     var ulFooter = document.createElement("ul");
-    for(let j = 0; j < footerContent.length; j++){
+    for(let j = 0; j < footerContent.length + 1; j++){
         var liFooter = document.createElement("li");
         var contentFooter = document.createTextNode(`${footerContent[i][j]}`);
         if(i != 2){
@@ -53,6 +53,9 @@ for(let i = 0; i < footerContent.length; i++){
                 aFooter.setAttribute("target", "_blank");
             }
             aFooter.appendChild(contentFooter);
+            if(i == 0 && j == 3){
+              aFooter.innerHTML += "<i class=\"fas fa-file-pdf\"></i>";
+            }
             liFooter.appendChild(aFooter);
         }
         else{
@@ -63,7 +66,7 @@ for(let i = 0; i < footerContent.length; i++){
     futer.appendChild(ulFooter);
 }
 
-futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div><div class="documentation"><a href="" target="_blank"><i class="fas fa-file-pdf"></i><a><div>';
+futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div>';
 // adding copyright and link to the portfolio page
 
 $("#backToTheTop").click(topFunction);

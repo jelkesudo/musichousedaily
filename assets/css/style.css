@@ -478,6 +478,7 @@ body #footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #121212;
+  padding: 20px 0px;
 }
 
 body #footer ul {
@@ -494,7 +495,7 @@ body #footer ul li {
 }
 
 body #footer .copyright {
-  width: 60%;
+  width: 100%;
   text-align: center;
   color: #FFFFFF;
 }
@@ -507,11 +508,6 @@ body #footer .copyright :hover {
   color: #ce5f15;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-body #footer .documentation {
-  width: 20%;
-  text-align: center;
 }
 
 #backToTheTop {
@@ -820,11 +816,7 @@ body #footer .documentation {
     margin-left: 20px;
   }
   body #footer .copyright {
-    width: 100%;
     padding: 10px 0px;
-  }
-  body #footer .documentation {
-    padding-bottom: 20px;
   }
 }
 

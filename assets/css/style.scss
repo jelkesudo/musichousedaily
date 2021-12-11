@@ -336,6 +336,7 @@ body{
         width: 100%;
         @include fleks-center();
         background-color: $pageColor;
+        padding: 20px 0px;
         ul{
             width: 20%;
             margin: 15px 0px;
@@ -348,7 +349,7 @@ body{
             }
         }
         .copyright{
-            width: 60%;
+            width: 100%;
             text-align: center;
             color: $whiteLetters;
             a{
@@ -357,15 +358,6 @@ body{
             :hover{
                 color: rgb(206, 95, 21);
                 transition: 0.5s;
-            }
-        }
-        .documentation{
-            width: 20%;
-            text-align: center;
-            a{
-                i{
-                    
-                }
             }
         }
     }
@@ -731,11 +723,7 @@ body{
                 margin-left: 20px;
             }
             .copyright{
-                width: 100%;
                 padding: 10px 0px;
-            }
-            .documentation{
-                padding-bottom: 20px;
             }
         }
     }

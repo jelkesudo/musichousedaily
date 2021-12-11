@@ -137,7 +137,7 @@ let newsPicture = ["kanye-chant.jpg",
                     "kanye-jeesus.jpg",
                     "drake-gramy.jpg",
                     "blinding-lights.jpg",
-                    "kanye-chant.jpg"];
+                    "moms-spagetti.jpg"];
 
 let newsContent = ["Kanye West's 10th album arrives barely finished and with a lot of baggage. Its 27 tracks include euphoric highs that lack connective tissue, a data dump of songs searching for a higher calling.", 
                     "\"May you continue to shine like a diamond\", the countrys prime minister, Mia Mottley, said at an investiture ceremony for the pop singer, fashion icon and entrepreneur, in reference to her 2012 hit Diamonds.", 
@@ -200,7 +200,7 @@ for(let i = 0; i < newsTitles.length; i++){
       else{
         button.innerHTML = "Click/tap the box for more...";
       }
-      $(additionalText).toggle();
+      $(additionalText).slideToggle('slow');
     });
 
 
