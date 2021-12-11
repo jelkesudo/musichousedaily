@@ -4,7 +4,7 @@ let navigation = document.createElement("nav");
 let redosled = document.createElement("ul");
 
 let pageName = ["Home", "Register", "Author"];
-let links = ["index.html", "login.html", "author.html"];
+let links = ["index.html", "register.html", "author.html"];
 
 for(let i = 0; i < pageName.length; i++){
     var liChange = document.createElement("li");
