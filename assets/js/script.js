@@ -66,9 +66,11 @@ for(let i = 0; i < footerContent.length; i++){
 futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div>';
 // adding copyright and link to the portfolio page
 
+$("#backToTheTop").click(topFunction);
+
 // button scroll top - from w3schools
 
-mybutton = document.getElementById("myBtn");
+mybutton = document.getElementById("backToTheTop");
 
 window.onscroll = function() {scrollFunction()};
 
