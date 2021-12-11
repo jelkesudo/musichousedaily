@@ -1,3 +1,4 @@
+// form generation
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let selectDay = document.getElementById("day");
@@ -24,6 +25,9 @@ for(let i = 2021; i > 1899; i--){
     newOption.innerHTML = `${i}`;
     selectYear.appendChild(newOption);
 }
+
+//end of form generation
+
 // declaring form messages and checking all of the fields
 
 let form = document.getElementById("register");
@@ -52,12 +56,12 @@ form.addEventListener("submit", (e) => {
     yearsCheck(year, "You must be over 16 years");
     if (numberMistakes == 0){
         alert("Sucesfull registration");
-        setTimeout("location.reload(true);",0);
+        setTimeout("location.reload(true);", 0);
     }
 });
 
 form.addEventListener("reset", () => {
-    setTimeout("location.reload(true);",0);
+    setTimeout("location.reload(true);", 0);
 });
 
 let checkName = (check, message) => {
