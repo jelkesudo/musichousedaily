@@ -219,37 +219,20 @@ let newsArticleID = Array.prototype.slice.call(newsArticle, 0);
 
 for(let i = 0; i < aArrayID.length; i++){
   aArrayID[i].addEventListener("click", function(){
-    filterSelection(`${namesPictures[i]}`);
+    filterArtists(`${namesPictures[i]}`);
   });
 }
 
-function filterSelection(c/*namesPicture*/) {
-  var x, i;
-  x = document.getElementsByClassName("newsArticle");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+function filterArtists(check/*namesPicture*/) {
+  var articles, i;
+  articles = document.getElementsByClassName("newsArticle");
+  if (check == "all"){
+    check = "";
   }
-}
-
-function addClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function removeClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+  for (i = 0; i < articles.length; i++) {
+    articles[i].classList.remove("show");
+    if (articles[i].className.indexOf(check) > -1){
+      articles[i].classList.add("show");
     }
   }
-  element.className = arr1.join(" ");
 }

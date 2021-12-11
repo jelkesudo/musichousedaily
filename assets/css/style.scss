@@ -372,6 +372,7 @@ body{
     z-index: 8;
     background-color: $pageColor;
     border: 1px solid $assetsBlue;
+    border-radius: 15px;
 }
 @media screen and (max-width: 1450px) {
     body {
