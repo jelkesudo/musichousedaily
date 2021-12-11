@@ -348,7 +348,7 @@ body{
             }
         }
         .copyright{
-            width: 100%;
+            width: 60%;
             text-align: center;
             color: $whiteLetters;
             a{
@@ -357,6 +357,15 @@ body{
             :hover{
                 color: rgb(206, 95, 21);
                 transition: 0.5s;
+            }
+        }
+        .documentation{
+            width: 20%;
+            text-align: center;
+            a{
+                i{
+                    
+                }
             }
         }
     }
@@ -720,6 +729,13 @@ body{
             ul{
                 width: 100%;
                 margin-left: 20px;
+            }
+            .copyright{
+                width: 100%;
+                padding: 10px 0px;
+            }
+            .documentation{
+                padding-bottom: 20px;
             }
         }
     }

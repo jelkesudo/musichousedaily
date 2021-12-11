@@ -1,6 +1,6 @@
 // changing title on the start of the index page
 
-var title = ["music", "artists", "albums"];
+var title = ["reviwes", "artists", "albums"];
 
 let spanTitle = document.querySelector('.contentText span');
 
@@ -107,24 +107,24 @@ let newsTitles = ["Kanye drops new album \"Donda\"",
                     "Eminem released a new album", 
                     "Billie Eilish has a fragerance!!!", 
                     "Weekend tour shedueled for November 2022", 
-                    "\"Bad guy\" reaches 1 Billion streams", 
+                    "\"Bad guy\" reaches 1 Billion views", 
                     "\"Jesus is king\" still on the top",
                     "Drake withdraws Grammy 2022 nominations",
-                    "\"Blinding lights\" song of the decade?",
-                    "Title12"];
+                    "\"Blinding lights\" all-time No.1 Billboard single",
+                    "\"Moms spageti\" is real?!"];
 
 let newsCaption = ["Kanye climbed the leaderboar with his new album!", 
                     "Rihanna being honored in her home country!", 
                     "Certified Lover Boy hits top charts!", 
-                    "Kim needed someone who \"she can spend her life with\"", 
+                    "Kim needs someone who \"she can spend her life with\"", 
                     "After a long wait, we finnaly got it!", 
-                    "Lorem ipsum dolor sit amet", 
+                    "When will it be able?", 
                     "It is right around the corner...", 
-                    "Billie has reached an amaizing milestone", 
-                    "kanye",
-                    "Lorem ipsum dolor sit amet",
-                    "Lorem ipsum dolor sit amet",
-                    "Lorem ipsum dolor sit amet" ];
+                    "Billie has reached an amaizing milestone!", 
+                    "But we are waiting for Donda to rise!",
+                    "What could be the reason?",
+                    "Does it really deserve the title?",
+                    "Once a dream, now we can proudly say a reality" ];
 
 let newsPicture = ["kanye-chant.jpg", 
                     "rihanna-barbados.jpg",
@@ -139,18 +139,18 @@ let newsPicture = ["kanye-chant.jpg",
                     "blinding-lights.jpg",
                     "kanye-chant.jpg"];
 
-let newsContent = ["Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
+let newsContent = ["Kanye West's 10th album arrives barely finished and with a lot of baggage. Its 27 tracks include euphoric highs that lack connective tissue, a data dump of songs searching for a higher calling.", 
                     "\"May you continue to shine like a diamond\", the countrys prime minister, Mia Mottley, said at an investiture ceremony for the pop singer, fashion icon and entrepreneur, in reference to her 2012 hit Diamonds.", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet", 
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet",
-                    "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet" ];
+                    "Drake's sixth album sounds good but feels labored. Melancholic and often incisive, it becomes an overlong and very familiar journey through the life, mind, and heart of Drake. The Certified Lover Boy is selectively honest, occasionally heartless, and set in his ways.", 
+                    "Days after Kim Kardashian honoured Kanye West during her People's Choice Awards speech, the rapper has made another public plea for them to rekindle their romance. 'I need you to run right back to me,' West said on Thursday night, during a performance of hit song 'Runaway', at the Free Larry Hoover benefit concert, before adding: 'More specifically, Kimberly.'", 
+                    "\"Music to be murdered by\" is the new album by Eminem that recently dropped on all streaming platforms. All harcore fans of Eminem waited for this moment, for the king of rap and lyrics to be one more in the spotlight", 
+                    "The perfume additionally features notes of amber and musk, as well as cocoa and berries. Eilish will be dropping online at 9 a.m. PST (12 p.m. EST) on November 10. Priced at $68 USD, Eilish will be available in stores all across the globe.", 
+                    "The Weekend is shifting around his 2022 tour plans, pushing back the start of the trek to next summer and moving his gigs from arenas to stadiums. In a statement, the Weeknd said, “Due to constraints of arenas and the demand for more shows I want to do something bigger and special for you which requires stadiums.” Ticket holders will be refunded automatically, and they'll also get priority to buy tickets for the new shows when they're announced. Dates will be detailed soon.", 
+                    "\"Bad Guy\" surpassed one billion views in November 2020; to celebrate, Google created an 'Infinite Bad Guy' interactive site that allowed users to switch between over 15,000 different covers of the song available on YouTube.", 
+                    "Jesus Is King is the ninth studio album by American rapper Kanye West, that got a lot of streams since it was released, but statistics show that Donda may surpass his ninth album by a lot!",
+                    "Rapper and singer Drake has withdrawn his two nominations for the 2022 Grammy Awards. The Canadian star, a previous four-time Grammy winner, had been in the running for Best Rap Album for his sixth studio record Certified Lover Boy, and Best Rap Performance for single Way 2 Sexy featuring Future and Young Thug.",
+                    "The Weeknd's hit single Blinding Lights has officially been crowned the all-time No 1 song on the Billboard single charts, ousting Chubby Checker's 1960s hit the Twist. The song, an instant synth-pop classic, debuted in late November 2019 and topped the weekly Billboard Hot 100 for four weeks in April and May 2020, going on to spend a record-shattering 90 consecutive weeks on the chart.",
+                    "Mom's Spaghetti existed sporadically before it set up shop in the southwest corner of Union Assembly, the new downtown Detroit venture operated by Michigan restaurant group Union Joints. The company launched in 1995 in nearby Clarkston, operating a restaurant out of a shuttered 19th Century Baptist Church—its big draw is the mac and cheese, so the company knows its way around a noodle. Union Joints helped Eminem and his manager, Paul Rosenberg, launch their pasta place in 2017 with a pop-up to help celebrate the arrival of the rapper's album Revival." ];
 
 let sortNews = ["kanye", "rihanna", "drake", "kanye", "eminem", "billie", "weekend", "billie", "kanye", "drake", "weekend", "eminem"];
 

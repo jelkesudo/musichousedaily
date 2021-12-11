@@ -63,7 +63,7 @@ for(let i = 0; i < footerContent.length; i++){
     futer.appendChild(ulFooter);
 }
 
-futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div>';
+futer.innerHTML += '<div class="copyright">&copy;Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelić</a> 2021 - Visoka ICT</div><div class="documentation"><a href="" target="_blank"><i class="fas fa-file-pdf"></i><a><div>';
 // adding copyright and link to the portfolio page
 
 $("#backToTheTop").click(topFunction);
