@@ -25,17 +25,16 @@ for(let i = 2021; i > 1899; i--){
     selectYear.appendChild(newOption);
 }
 // declaring form messages and checking all of the fields
-let id = (id) => document.getElementById(id);
-let classes = (classes) => document.getElementsByClassName(classes);
-let form = id("register");
-let nickname = id("nickname");
-let password = id("password");
-let passwordConfirm = id("passwordConfirm");
-let email = id("email");
-let day = id("day");
-let month = id("month");
-let year = id("year");
-let errors = classes("error");
+
+let form = document.getElementById("register");
+let nickname = document.getElementById("nickname");
+let password = document.getElementById("password");
+let passwordConfirm = document.getElementById("passwordConfirm");
+let email = document.getElementById("email");
+let day = document.getElementById("day");
+let month = document.getElementById("month");
+let year = document.getElementById("year");
+let errors = document.getElementsByClassName("error");
 var numberMistakes;
 
 //regex check for email and nickname
@@ -46,9 +45,9 @@ let passwordRegexCheck = /^.*(?=.{6,})(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
-    checkName(nickname, 0, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
-    passwordCheck(password, 1, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
-    passwordConfirmCheck(password, passwordConfirm, 2, "Passwords must match");
+    checkName(nickname, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
+    passwordCheck(password, "The password must contain one lowercase letter, one uppercase letter, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
+    passwordConfirmCheck(password, passwordConfirm, "Passwords must match");
     emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
     yearsCheck(year, "You must be over 16 years");
     if (numberMistakes == 0){
@@ -61,45 +60,45 @@ form.addEventListener("reset", () => {
     setTimeout("location.reload(true);",0);
 });
 
-let checkName = (id, i, message) => {
-    if (!nicknameRegexCheck.test(id.value)) {
-      errors[i].innerHTML = message;
+let checkName = (check, message) => {
+    if (!nicknameRegexCheck.test(check.value)) {
+      errors[0].innerHTML = message;
       numberMistakes++;
     } 
     else {
-      errors[i].innerHTML = "";
+      errors[0].innerHTML = "";
     }
   };
 
-let passwordCheck = (id, i, message) =>{
-  if (id.value == "" || !passwordRegexCheck.test(id.value)) {
-    errors[i].innerHTML = message;
+let passwordCheck = (check, message) =>{
+  if (check.value == "" || !passwordRegexCheck.test(check.value)) {
+    errors[1].innerHTML = message;
     numberMistakes++;
   } 
   else {
-    errors[i].innerHTML = "";
+    errors[1].innerHTML = "";
   }
 }
 
-let passwordConfirmCheck = (id, id2, i, message) =>{
-  if (id.value != id2.value) {
-    errors[i].innerHTML = message;
+let passwordConfirmCheck = (check, check2, message) =>{
+  if (check2.value == "" || check.value != check2.value) {
+    errors[2].innerHTML = message;
     numberMistakes++;
   } 
   else {
-    errors[i].innerHTML = "";
+    errors[2].innerHTML = "";
   }
 }
 
-let emailCheck = (id, message) => {
-    if (!emailRegexCheck.test(id.value)) {
+let emailCheck = (check, message) => {
+    if (!emailRegexCheck.test(check.value)) {
       errors[3].innerHTML = message;
       numberMistakes++;
     } else errors[3].innerHTML = "";
   };
 
-let yearsCheck = (id, message) => {
-    if (parseInt(id.value) > 2005) {
+let yearsCheck = (check, message) => {
+    if (parseInt(check.value) > 2005) {
       errors[5].innerHTML = message;
       numberMistakes++;
     } else errors[5].innerHTML = "";

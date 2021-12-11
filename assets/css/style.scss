@@ -363,6 +363,16 @@ body{
         }
     }
 }
+.backToTheTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 8;
+    background-color: $pageColor;
+    border: 1px solid $assetsBlue;
+}
 @media screen and (max-width: 1450px) {
     body {
         main{
