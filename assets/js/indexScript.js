@@ -218,7 +218,6 @@ let aArrayID = Array.prototype.slice.call(anchorArtistsId, 0);
 let newsArticleID = Array.prototype.slice.call(newsArticle, 0);
 
 for(let i = 0; i < aArrayID.length; i++){
-  console.log(`${namesPictures[i]}`);
   aArrayID[i].addEventListener("click", function(){
     filterSelection(`${namesPictures[i]}`);
   });
