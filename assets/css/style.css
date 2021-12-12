@@ -799,6 +799,8 @@ body #footer .copyright :hover {
   }
   body main .containerAuthor {
     padding: 100px 0px;
+    width: 90%;
+    margin: 0px auto;
   }
   body main .containerAuthor .authorImage, body main .containerAuthor .authorText {
     width: 100%;
