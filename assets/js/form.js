@@ -39,7 +39,12 @@ let day = document.getElementById("day");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 let errors = document.getElementsByClassName("error");
-var numberMistakes;
+
+let nicknameBool = false;
+let passwordBool = false;
+let passwordConfirmBool = false;
+let emailBool = false;
+let yearBool = false;
 
 //regex check for email and nickname
 let nicknameRegexCheck = /^[A-Za-z]{1,20}[0-9]{3,20}$/;
@@ -47,14 +52,13 @@ let emailRegexCheck = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
 let passwordRegexCheck = /^[A-Za-z0-9]{5,20}$/;
 
 form.addEventListener("submit", (e) => {
-    numberMistakes = 0;
     e.preventDefault();
-    checkName(nickname);
-    passwordCheck(password);
-    passwordConfirmCheck(password, passwordConfirm);
-    emailCheck(email);
-    yearsCheck(year);
-    if (numberMistakes == 0){
+    checkName();
+    passwordCheck();
+    passwordConfirmCheck();
+    emailCheck();
+    yearsCheck();
+    if (nicknameBool && passwordBool && passwordConfirmBool && emailBool && yearBool){
         alert("Sucesfull registration");
         setTimeout("location.reload(true);", 0);
     }
@@ -66,46 +70,63 @@ form.addEventListener("reset", () => {
     }
 });
 
-let checkName = (check) => {
-    if (!nicknameRegexCheck.test(check.value)) {
-      errors[0].innerHTML = "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..";
-      numberMistakes++;
+function checkName() {
+    if (nickname.value.match(nicknameRegexCheck)) {
+      nicknameBool = true;
+      errors[0].innerHTML = "";
     } 
     else {
-      errors[0].innerHTML = "";
+      nicknameBool = false;
+      errors[0].innerHTML = "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..";
     }
   };
 
-let passwordCheck = (check) =>{
-  if (check.value == "" || !passwordRegexCheck.test(check.value)) {
-    errors[1].innerHTML = "Your password should be at least 5 characters long and contain letters and numbers";
-    numberMistakes++;
+function passwordCheck (){
+  if (password.value == "" || !passwordRegexCheck.test(password.value)) {
+    passwordBool = false;
+    errors[1].innerHTML = "Your password should be at least 5 characters long and contain letters and numbers, it should not contain symbols";
   } 
   else {
+    passwordBool = true;
     errors[1].innerHTML = "";
   }
 }
 
-let passwordConfirmCheck = (check, check2) =>{
-  if (check2.value == "" || check.value != check2.value) {
+function passwordConfirmCheck () {
+  if (passwordConfirm.value == "" || password.value != passwordConfirm.value) {
+    passwordConfirmBool = false;
     errors[2].innerHTML = "Passwords must match";
-    numberMistakes++;
   } 
   else {
+    passwordConfirmBool = true;
     errors[2].innerHTML = "";
   }
 }
 
-let emailCheck = (check) => {
-    if (!emailRegexCheck.test(check.value)) {
+function emailCheck () {
+    if (!emailRegexCheck.test(email.value)) {
+      emailBool = false;
       errors[3].innerHTML = "Must conatin @, domain after @, example: name@domain.com";
-      numberMistakes++;
-    } else errors[3].innerHTML = "";
+    }
+    else {
+      emailBool = true;
+      errors[3].innerHTML = "";
+    }
   };
 
-let yearsCheck = (check) => {
-    if (parseInt(check.value) > 2005) {
-      errors[5].innerHTML = "You must be over 16 years";
-      numberMistakes++;
-    } else errors[5].innerHTML = "";
+function yearsCheck () {
+    if (parseInt(year.value) > 2005) {
+      yearBool = false;
+      errors[4].innerHTML = "You must be over 16 years";
+    } 
+    else {
+      yearBool = true;
+      errors[4].innerHTML = ""; 
+    }
 };
+
+nickname.addEventListener("blur", checkName);
+password.addEventListener("blur", passwordCheck);
+passwordConfirm.addEventListener("blur", passwordConfirmCheck);
+email.addEventListener("blur", emailCheck);
+year.addEventListener("blur", yearsCheck);

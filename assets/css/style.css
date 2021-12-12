@@ -409,10 +409,6 @@ body main .container .error {
   color: red;
 }
 
-body main .container .empty {
-  display: none;
-}
-
 body main .container .logoSredina {
   text-align: center;
 }
