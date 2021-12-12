@@ -1,5 +1,6 @@
 :root {
   --pageColor: #121212;
+  --titlesOther: #121212;
   --whiteLetters: #FFFFFF;
   --assetsBlue: rgb(26, 115, 218);
 }
@@ -36,7 +37,6 @@ body header {
   width: 100%;
   padding: 5px 0px;
   background-color: var(--pageColor);
-  color: var(--whiteLetters);
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +58,7 @@ body header a i {
   margin-top: 6px;
   margin-left: 150px;
   font-size: 45px;
+  color: #FFFFFF;
 }
 
 body header nav {
@@ -88,6 +89,7 @@ body header nav ul a li {
   background-color: none;
   margin: 0px 10px;
   padding: 5px 10px;
+  color: #FFFFFF;
 }
 
 body main .cover {
@@ -130,17 +132,17 @@ body main .cover .welcomeText .contentText {
 body main .cover .welcomeText .contentText h1 {
   font-size: 65px;
   padding-bottom: 50px;
-  color: var(--pageColor);
+  color: var(--titlesOther);
 }
 
 body main .cover .welcomeText .contentText p {
   font-size: 30px;
-  color: var(--pageColor);
+  color: var(--titlesOther);
 }
 
 body main .cover .welcomeText .contentText span {
   font-size: 50px;
-  color: var(--pageColor);
+  color: var(--titlesOther);
 }
 
 body main .cover .welcomeText .contentText a button {
@@ -341,6 +343,10 @@ body main .container .logoSredina, body main .container .forma {
   width: 30%;
 }
 
+body main .container .logoSredina h1 {
+  color: var(--titlesOther);
+}
+
 body main .container .fleks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,6 +365,7 @@ body main .container .margin-auto {
 body main .container .forma h2 {
   text-align: center;
   padding-bottom: 10px;
+  color: var(--titlesOther);
 }
 
 body main .container .forma input[type=text], body main .container .forma input[type=password], body main .container .forma input[type=email], body main .container .forma select, body main .container .forma button {
@@ -407,6 +414,7 @@ body main .container .forma button {
   width: 40%;
   padding: 10px 5px;
   background-color: var(--whiteLetters);
+  color: var(--titlesOther);
   cursor: pointer;
 }
 
@@ -457,7 +465,7 @@ body main .containerAuthor .authorText {
 }
 
 body main .containerAuthor .authorText h2, body main .containerAuthor .authorText p {
-  color: var(--pageColor);
+  color: var(--titlesOther);
 }
 
 body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
@@ -492,9 +500,13 @@ body #footer ul {
   width: 20%;
   margin: 15px 0px;
   padding: 10px 25px;
-  color: var(--whiteLetters);
+  color: #FFFFFF;
   list-style-type: disc;
-  border-left: 2px solid var(--whiteLetters);
+  border-left: 2px solid #FFFFFF;
+}
+
+body #footer ul a {
+  color: #FFFFFF;
 }
 
 body #footer ul li {
@@ -504,7 +516,7 @@ body #footer ul li {
 body #footer .copyright {
   width: 100%;
   text-align: center;
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 body #footer .copyright a {
@@ -541,7 +553,7 @@ body #footer .copyright :hover {
   padding: 10px 0px;
 }
 
-#toggleNightMode, #toggleNightModeNoPicture {
+#toggleNightMode, #toggleNightModeNoPicture, #toggleNightModeRegister {
   position: absolute;
   top: 100px;
   right: 40px;
@@ -552,61 +564,61 @@ body #footer .copyright :hover {
   cursor: pointer;
 }
 
-#toggleNightMode p, #toggleNightModeNoPicture p {
-  color: var(--pageColor);
+#toggleNightMode p, #toggleNightModeNoPicture p, #toggleNightModeRegister p {
+  color: var(--titlesOther);
 }
 
-#toggleNightMode i, #toggleNightModeNoPicture i {
-  color: var(--pageColor);
+#toggleNightMode i, #toggleNightModeNoPicture i, #toggleNightModeRegister i {
+  color: var(--titlesOther);
   font-size: 40px;
 }
 
 #slick-slide-control00::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control01::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control02::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control03::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control04::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control05::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control06::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control07::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control08::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control09::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control010::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 #slick-slide-control011::before {
-  color: var(--whiteLetters);
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 1450px) {
@@ -897,7 +909,7 @@ body #footer .copyright :hover {
   body #footer .copyright {
     padding: 10px 0px;
   }
-  body #toggleNightMode, body #toggleNightModeNoPicture {
+  body #toggleNightMode, body #toggleNightModeNoPicture, body #toggleNightModeRegister {
     top: 60px;
     right: 20px;
     width: 42px;
@@ -906,11 +918,10 @@ body #footer .copyright :hover {
     text-align: center;
     cursor: pointer;
   }
-  body #toggleNightMode p, body #toggleNightModeNoPicture p {
+  body #toggleNightMode p, body #toggleNightModeNoPicture p, body #toggleNightModeRegister p {
     display: none;
   }
-  body #toggleNightMode i, body #toggleNightModeNoPicture i {
-    color: var(--pageColor);
+  body #toggleNightMode i, body #toggleNightModeNoPicture i, body #toggleNightModeRegister i {
     font-size: 40px;
   }
 }

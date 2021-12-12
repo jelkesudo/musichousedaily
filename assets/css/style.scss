@@ -1,8 +1,10 @@
 :root {
     --pageColor: #121212;
+    --titlesOther: #121212;
     --whiteLetters: #FFFFFF;
     --assetsBlue: rgb(26, 115, 218);
   }
+$whiteLetters: #FFFFFF;
 @font-face {
     font-family: "br";
     src: url("../fonts/br.ttf");
@@ -48,7 +50,6 @@ body{
         width: 100%;
         padding: 5px 0px;
         background-color: var(--pageColor);
-        color: var(--whiteLetters);;
         z-index: 5;
         @include fleks-between();
         a{
@@ -60,6 +61,7 @@ body{
                 margin-top: 6px;
                 margin-left: 150px;
                 font-size: 45px;
+                color: $whiteLetters;
             }
         }
         nav{
@@ -78,6 +80,7 @@ body{
                         background-color: none;
                         margin: 0px 10px;
                         padding: 5px 10px;
+                        color: $whiteLetters;
                     } 
                 }
             }
@@ -101,15 +104,15 @@ body{
                     h1{
                         font-size: 65px;
                         padding-bottom: 50px;
-                        color: var(--pageColor);
+                        color: var(--titlesOther);
                     }
                     p{
                         font-size: 30px;
-                        color: var(--pageColor);
+                        color: var(--titlesOther);
                     }
                     span{
                         font-size: 50px;
-                        color: var(--pageColor);
+                        color: var(--titlesOther);
                     }
                     a{
                         button{
@@ -230,7 +233,7 @@ body{
                 display: block;
             }
         }
-        // contact page
+        // register page
         .container{
             width: 80%;
             margin: 0px auto;
@@ -238,6 +241,11 @@ body{
             @include fleks-around;
             .logoSredina, .forma{
                 width: 30%;
+            }
+            .logoSredina{
+                h1{
+                    color: var(--titlesOther);
+                }
             }
             .fleks{
                 @include fleks;
@@ -250,6 +258,7 @@ body{
                 h2{
                     text-align: center;
                     padding-bottom: 10px;
+                    color: var(--titlesOther);
                 }
                 input[type=text], input[type=password], input[type=email], select, button{
                     border-radius: 7px;
@@ -279,6 +288,7 @@ body{
                     width: 40%;
                     padding: 10px 5px;
                     background-color: var(--whiteLetters);
+                    color: var(--titlesOther);
                     cursor: pointer;
                 }
             }
@@ -295,7 +305,7 @@ body{
                 }
             }
         }
-        // end of contact page
+        // end of register page
 
         // author page
         .containerAuthor{
@@ -316,7 +326,7 @@ body{
             .authorText{
                 padding: 100px 0px;
                 h2,p{
-                    color: var(--pageColor);
+                    color: var(--titlesOther);
                     a{
                         color: var(--assetsBlue);
                     }
@@ -341,9 +351,12 @@ body{
             width: 20%;
             margin: 15px 0px;
             padding: 10px 25px;
-            color: var(--whiteLetters);
+            color: $whiteLetters;
             list-style-type: disc;
-            border-left: 2px solid var(--whiteLetters);
+            border-left: 2px solid $whiteLetters;
+            a{
+                color: $whiteLetters;
+            }
             li{
                 padding: 10px 0px;
             }
@@ -351,7 +364,7 @@ body{
         .copyright{
             width: 100%;
             text-align: center;
-            color: var(--whiteLetters);
+            color: $whiteLetters;
             a{
                 color: var(--assetsBlue);
             }
@@ -382,7 +395,7 @@ body{
         padding: 10px 0px; 
     }
 }
-#toggleNightMode, #toggleNightModeNoPicture{
+#toggleNightMode, #toggleNightModeNoPicture, #toggleNightModeRegister{
     position: absolute;
     top: 100px;
     right: 40px;
@@ -392,17 +405,17 @@ body{
     text-align: center;
     cursor: pointer;
     p{
-        color: var(--pageColor);
+        color: var(--titlesOther);
     }
     i{
-        color: var(--pageColor);
+        color: var(--titlesOther);
         font-size: 40px;
     }
 }
 @for $i from 0 through 11 {
     
     #slick-slide-control0#{$i}::before {
-        color: var(--whiteLetters)
+        color: $whiteLetters;
     }
 }
 @media screen and (max-width: 1450px) {
@@ -752,7 +765,7 @@ body{
                 padding: 10px 0px;
             }
         }
-        #toggleNightMode, #toggleNightModeNoPicture{
+        #toggleNightMode, #toggleNightModeNoPicture, #toggleNightModeRegister{
             top: 60px;
             right: 20px;
             width: 42px;
@@ -764,7 +777,6 @@ body{
                 display: none;
             }
             i{
-                color: var(--pageColor);
                 font-size: 40px;
             }
         }

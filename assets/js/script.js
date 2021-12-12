@@ -2,12 +2,16 @@
 
 let picToggle = document.getElementById("togglePicture");
 
+let picToggleForm = document.getElementById("formPicture");
+
 let toggleDark = document.getElementById("iChange");
 
 let black = window.getComputedStyle(document.documentElement).getPropertyValue('--pageColor');
-console.log(black);
-let white = window.getComputedStyle(document.documentElement).getPropertyValue('--whiteLetters');
-console.log(white);
+
+let lessDark = window.getComputedStyle(document.documentElement).getPropertyValue('--whiteLetters');
+
+let white = window.getComputedStyle(document.documentElement).getPropertyValue('--titlesOther');
+
 $("#toggleNightMode").click(() =>{
   if(toggleDark.classList.contains("fa-toggle-off")){
     toggleDark.classList.remove("fa-toggle-off");
@@ -15,8 +19,9 @@ $("#toggleNightMode").click(() =>{
 
     picToggle.src = "assets/img/headPhoneDark.gif";
 
-    black = document.documentElement.style.setProperty('--pageColor', '#FFFFFF');
-    white = document.documentElement.style.setProperty('--whiteLetters', '#121212');
+    black = document.documentElement.style.setProperty("--pageColor", "#2e2e2e");
+    white = document.documentElement.style.setProperty("--whiteLetters", "#121212");
+    lessDark = document.documentElement.style.setProperty("--titlesOther", "#FFFFFF");
   }
   else{
     toggleDark.classList.add("fa-toggle-off");
@@ -25,7 +30,31 @@ $("#toggleNightMode").click(() =>{
     picToggle.src = "assets/img/headPhoneWhite.gif";
 
     black = document.documentElement.style.setProperty("--pageColor", "#121212");
-    white = document.documentElement.style.setProperty('--whiteLetters', '#FFFFFF');
+    white = document.documentElement.style.setProperty("--whiteLetters", "#FFFFFF");
+    lessDark = document.documentElement.style.setProperty("--titlesOther", "#121212");
+  }
+});
+
+$("#toggleNightModeRegister").click(() =>{
+  if(toggleDark.classList.contains("fa-toggle-off")){
+    toggleDark.classList.remove("fa-toggle-off");
+    toggleDark.classList.add("fa-toggle-on");
+
+    picToggleForm.src = "assets/img/headPhoneDark.gif";
+
+    black = document.documentElement.style.setProperty("--pageColor", "#2e2e2e");
+    white = document.documentElement.style.setProperty("--whiteLetters", "#121212");
+    lessDark = document.documentElement.style.setProperty("--titlesOther", "#FFFFFF");
+  }
+  else{
+    toggleDark.classList.add("fa-toggle-off");
+    toggleDark.classList.remove("fa-toggle-on");
+
+    picToggleForm.src = "assets/img/headPhoneWhite.gif";
+
+    black = document.documentElement.style.setProperty("--pageColor", "#121212");
+    white = document.documentElement.style.setProperty("--whiteLetters", "#FFFFFF");
+    lessDark = document.documentElement.style.setProperty("--titlesOther", "#121212");
   }
 });
 
@@ -34,8 +63,9 @@ $("#toggleNightModeNoPicture").click(() =>{
     toggleDark.classList.remove("fa-toggle-off");
     toggleDark.classList.add("fa-toggle-on");
 
-    black = document.documentElement.style.setProperty('--pageColor', '#FFFFFF');
-    white = document.documentElement.style.setProperty('--whiteLetters', '#121212');
+    black = document.documentElement.style.setProperty("--pageColor", "#2e2e2e");
+    white = document.documentElement.style.setProperty("--whiteLetters", "#121212");
+    lessDark = document.documentElement.style.setProperty("--titlesOther", "#FFFFFF");
   }
   else{
     toggleDark.classList.add("fa-toggle-off");
@@ -43,6 +73,7 @@ $("#toggleNightModeNoPicture").click(() =>{
 
     black = document.documentElement.style.setProperty("--pageColor", "#121212");
     white = document.documentElement.style.setProperty('--whiteLetters', '#FFFFFF');
+    lessDark = document.documentElement.style.setProperty('--titlesOther', '#121212');
   }
 });
 
