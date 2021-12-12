@@ -61,33 +61,42 @@ carouselBlock.appendChild(artistCarousel);
 
 
 $(document).ready(function(){
-  $('#carousel').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 770,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 430,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
+  $("#carousel").slick({
+    speed: 300,
+    slidesToShow: 4,
+    infinite: true,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
         }
-      ]
-    });
+      },
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          infinite: true
+        }
+      }
+    ]
+  });
 });
 
 //end of carousel

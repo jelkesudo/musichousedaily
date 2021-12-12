@@ -534,6 +534,54 @@ body #footer .copyright :hover {
   padding: 10px 0px;
 }
 
+#slick-slide-control00::before {
+  color: white;
+}
+
+#slick-slide-control01::before {
+  color: white;
+}
+
+#slick-slide-control02::before {
+  color: white;
+}
+
+#slick-slide-control03::before {
+  color: white;
+}
+
+#slick-slide-control04::before {
+  color: white;
+}
+
+#slick-slide-control05::before {
+  color: white;
+}
+
+#slick-slide-control06::before {
+  color: white;
+}
+
+#slick-slide-control07::before {
+  color: white;
+}
+
+#slick-slide-control08::before {
+  color: white;
+}
+
+#slick-slide-control09::before {
+  color: white;
+}
+
+#slick-slide-control010::before {
+  color: white;
+}
+
+#slick-slide-control011::before {
+  color: white;
+}
+
 @media screen and (max-width: 1450px) {
   body main .cover .welcomeText .contentText h1 {
     font-size: 50px;

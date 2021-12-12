@@ -382,6 +382,12 @@ body{
         padding: 10px 0px; 
     }
 }
+@for $i from 0 through 11 {
+    
+    #slick-slide-control0#{$i}::before {
+        color: white;
+    }
+}
 @media screen and (max-width: 1450px) {
     body {
         main{

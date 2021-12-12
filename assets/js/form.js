@@ -61,7 +61,9 @@ form.addEventListener("submit", (e) => {
 });
 
 form.addEventListener("reset", () => {
-    setTimeout("location.reload(true);", 0);
+    for(var i = 0; i < 6; i++){
+      errors[i].innerHTML = "";
+    }
 });
 
 let checkName = (check) => {
