@@ -1,6 +1,6 @@
 // changing title on the start of the index page
 
-var title = ["reviwes", "artists", "albums"];
+var title = ["reviews", "artists", "albums"];
 
 let spanTitle = document.querySelector('.contentText span');
 
@@ -62,37 +62,26 @@ carouselBlock.appendChild(artistCarousel);
 
 $(document).ready(function(){
   $("#carousel").slick({
-    speed: 300,
-    slidesToShow: 4,
-    infinite: true,
-    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
       {
         breakpoint: 770,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
           arrows: false,
-          dots: true,
-          infinite: true
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
           arrows: false,
-          dots: true,
-          infinite: true
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
         }
       }
     ]

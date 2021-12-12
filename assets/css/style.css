@@ -1,3 +1,9 @@
+:root {
+  --pageColor: #121212;
+  --whiteLetters: #FFFFFF;
+  --assetsBlue: rgb(26, 115, 218);
+}
+
 @font-face {
   font-family: "br";
   src: url("../fonts/br.ttf");
@@ -17,11 +23,11 @@ ul {
 
 a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--whiteLetters);
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: var(--whiteLetters);
   font-family: "br";
 }
 
@@ -29,8 +35,8 @@ body header {
   position: fixed;
   width: 100%;
   padding: 5px 0px;
-  background-color: #121212;
-  color: #FFFFFF;
+  background-color: var(--pageColor);
+  color: var(--whiteLetters);
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +49,7 @@ body header {
 }
 
 body header a :hover {
-  color: #1a73da;
+  color: var(--assetsBlue);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -71,8 +77,8 @@ body header nav ul {
 }
 
 body header nav ul a :hover {
-  background-color: #1a73da;
-  color: #FFFFFF;
+  background-color: var(--assetsBlue);
+  color: var(--whiteLetters);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -124,30 +130,33 @@ body main .cover .welcomeText .contentText {
 body main .cover .welcomeText .contentText h1 {
   font-size: 65px;
   padding-bottom: 50px;
+  color: var(--pageColor);
 }
 
 body main .cover .welcomeText .contentText p {
   font-size: 30px;
+  color: var(--pageColor);
 }
 
 body main .cover .welcomeText .contentText span {
   font-size: 50px;
+  color: var(--pageColor);
 }
 
 body main .cover .welcomeText .contentText a button {
   margin-top: 20px;
   padding: 20px 50px;
-  background-color: #1a73da;
-  border: 1px solid #121212;
+  background-color: var(--assetsBlue);
+  border: 1px solid var(--pageColor);
   border-radius: 25px;
   cursor: pointer;
-  color: white;
+  color: var(--whiteLetters);
 }
 
 body main .cover .welcomeText .contentText a :hover {
-  background-color: #FFFFFF;
-  border: 1px solid #1a73da;
-  color: black;
+  background-color: var(--whiteLetters);
+  border: 1px solid var(--assetsBlue);
+  color: var(--pageColor);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -158,11 +167,9 @@ body main .cover .picture img {
 
 body main .carouselBlock {
   width: 100%;
-  border-top: 1px solid #121212;
-  border-bottom: 1px solid #121212;
   text-align: center;
   padding-bottom: 50px;
-  background-color: #121212;
+  background-color: #2e2e2e;
   color: #FFFFFF;
 }
 
@@ -181,7 +188,7 @@ body main .carouselBlock #carousel a .carouselItem {
   margin: 0px auto;
   text-align: center;
   border-radius: 15px;
-  color: #121212;
+  color: var(--pageColor);
   position: relative;
 }
 
@@ -211,7 +218,7 @@ body main .carouselBlock #carousel a :hover {
 body main .carouselBlock #carousel a :hover .artistName {
   display: block;
   border-radius: 15px;
-  background-color: rgba(18, 18, 18, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
   height: 100%;
   cursor: pointer;
@@ -234,10 +241,10 @@ body main #news .newsArticle {
   height: 0%;
   margin: 25px 0px;
   border-radius: 15px;
-  background-color: #121212;
+  background-color: #2e2e2e;
   color: #FFFFFF;
-  -webkit-box-shadow: 0px 3px 6px #121212;
-          box-shadow: 0px 3px 6px #121212;
+  -webkit-box-shadow: 0px 3px 6px #2e2e2e;
+          box-shadow: 0px 3px 6px #2e2e2e;
   display: none;
 }
 
@@ -256,7 +263,7 @@ body main #news .newsArticle .titleNews {
 
 body main #news .newsArticle span {
   padding-bottom: 10px;
-  color: #1a73da;
+  color: var(--assetsBlue);
   font-weight: bold;
 }
 
@@ -358,7 +365,7 @@ body main .container .forma input[type=text], body main .container .forma input[
   border-radius: 7px;
   padding: 10px 5px;
   margin: 15px 0px;
-  border: 1px solid #1a73da;
+  border: 1px solid var(--assetsBlue);
 }
 
 body main .container .forma .around {
@@ -399,7 +406,7 @@ body main .container .forma input[type=text], body main .container .forma input[
 body main .container .forma button {
   width: 40%;
   padding: 10px 5px;
-  background-color: #FFFFFF;
+  background-color: var(--whiteLetters);
   cursor: pointer;
 }
 
@@ -449,8 +456,12 @@ body main .containerAuthor .authorText {
   padding: 100px 0px;
 }
 
+body main .containerAuthor .authorText h2, body main .containerAuthor .authorText p {
+  color: var(--pageColor);
+}
+
 body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
-  color: #1a73da;
+  color: var(--assetsBlue);
 }
 
 body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
@@ -473,7 +484,7 @@ body #footer {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #121212;
+  background-color: var(--pageColor);
   padding: 20px 0px;
 }
 
@@ -481,9 +492,9 @@ body #footer ul {
   width: 20%;
   margin: 15px 0px;
   padding: 10px 25px;
-  color: #FFFFFF;
+  color: var(--whiteLetters);
   list-style-type: disc;
-  border-left: 2px solid #FFFFFF;
+  border-left: 2px solid var(--whiteLetters);
 }
 
 body #footer ul li {
@@ -493,11 +504,11 @@ body #footer ul li {
 body #footer .copyright {
   width: 100%;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--whiteLetters);
 }
 
 body #footer .copyright a {
-  color: #1a73da;
+  color: var(--assetsBlue);
 }
 
 body #footer .copyright :hover {
@@ -513,12 +524,12 @@ body #footer .copyright :hover {
   width: 42px;
   height: 42px;
   z-index: 8;
-  background-color: #121212;
-  border: 3px solid #1a73da;
+  background-color: var(--pageColor);
+  border: 3px solid var(--assetsBlue);
   border-radius: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: white;
+  color: var(--whiteLetters);
   text-align: center;
   opacity: 0;
   -webkit-transition: 0.1s;
@@ -530,52 +541,72 @@ body #footer .copyright :hover {
   padding: 10px 0px;
 }
 
+#toggleNightMode, #toggleNightModeNoPicture {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  width: 42px;
+  height: 42px;
+  z-index: 8;
+  text-align: center;
+  cursor: pointer;
+}
+
+#toggleNightMode p, #toggleNightModeNoPicture p {
+  color: var(--pageColor);
+}
+
+#toggleNightMode i, #toggleNightModeNoPicture i {
+  color: var(--pageColor);
+  font-size: 40px;
+}
+
 #slick-slide-control00::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control01::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control02::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control03::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control04::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control05::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control06::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control07::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control08::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control09::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control010::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 #slick-slide-control011::before {
-  color: white;
+  color: var(--whiteLetters);
 }
 
 @media screen and (max-width: 1450px) {
@@ -765,7 +796,7 @@ body #footer .copyright :hover {
     padding-bottom: 0px;
   }
   body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
-    color: #1a73da;
+    color: var(--assetsBlue);
   }
   body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
     color: #ce5f15;
@@ -866,6 +897,22 @@ body #footer .copyright :hover {
   body #footer .copyright {
     padding: 10px 0px;
   }
+  body #toggleNightMode, body #toggleNightModeNoPicture {
+    top: 60px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    z-index: 8;
+    text-align: center;
+    cursor: pointer;
+  }
+  body #toggleNightMode p, body #toggleNightModeNoPicture p {
+    display: none;
+  }
+  body #toggleNightMode i, body #toggleNightModeNoPicture i {
+    color: var(--pageColor);
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -919,7 +966,7 @@ body #footer .copyright :hover {
     border-radius: 15px;
   }
   body main .containerAuthor .authorText h2 a, body main .containerAuthor .authorText p a {
-    color: #1a73da;
+    color: var(--assetsBlue);
   }
   body main .containerAuthor .authorText h2 :hover, body main .containerAuthor .authorText p :hover {
     color: #ce5f15;

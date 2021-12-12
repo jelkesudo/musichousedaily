@@ -1,3 +1,53 @@
+//darko mode button from stackoverflow
+
+let picToggle = document.getElementById("togglePicture");
+
+let toggleDark = document.getElementById("iChange");
+
+let black = window.getComputedStyle(document.documentElement).getPropertyValue('--pageColor');
+console.log(black);
+let white = window.getComputedStyle(document.documentElement).getPropertyValue('--whiteLetters');
+console.log(white);
+$("#toggleNightMode").click(() =>{
+  if(toggleDark.classList.contains("fa-toggle-off")){
+    toggleDark.classList.remove("fa-toggle-off");
+    toggleDark.classList.add("fa-toggle-on");
+
+    picToggle.src = "assets/img/headPhoneDark.gif";
+
+    black = document.documentElement.style.setProperty('--pageColor', '#FFFFFF');
+    white = document.documentElement.style.setProperty('--whiteLetters', '#121212');
+  }
+  else{
+    toggleDark.classList.add("fa-toggle-off");
+    toggleDark.classList.remove("fa-toggle-on");
+
+    picToggle.src = "assets/img/headPhoneWhite.gif";
+
+    black = document.documentElement.style.setProperty("--pageColor", "#121212");
+    white = document.documentElement.style.setProperty('--whiteLetters', '#FFFFFF');
+  }
+});
+
+$("#toggleNightModeNoPicture").click(() =>{
+  if(toggleDark.classList.contains("fa-toggle-off")){
+    toggleDark.classList.remove("fa-toggle-off");
+    toggleDark.classList.add("fa-toggle-on");
+
+    black = document.documentElement.style.setProperty('--pageColor', '#FFFFFF');
+    white = document.documentElement.style.setProperty('--whiteLetters', '#121212');
+  }
+  else{
+    toggleDark.classList.add("fa-toggle-off");
+    toggleDark.classList.remove("fa-toggle-on");
+
+    black = document.documentElement.style.setProperty("--pageColor", "#121212");
+    white = document.documentElement.style.setProperty('--whiteLetters', '#FFFFFF');
+  }
+});
+
+//end of dark mode button from stackoverflow
+
 // creating header in HTML
 
 let navigation = document.createElement("nav");

@@ -1,6 +1,8 @@
-$pageColor: #121212;
-$whiteLetters: #FFFFFF;
-$assetsBlue: rgb(26, 115, 218);
+:root {
+    --pageColor: #121212;
+    --whiteLetters: #FFFFFF;
+    --assetsBlue: rgb(26, 115, 218);
+  }
 @font-face {
     font-family: "br";
     src: url("../fonts/br.ttf");
@@ -36,23 +38,22 @@ ul{
 
 a{
     text-decoration: none;
-    color: $whiteLetters;
+    color: var(--whiteLetters);;
 }
 body{
-    background-color: $whiteLetters;
-    //font-family: "br";
+    background-color: var(--whiteLetters);
     font-family: "br";
     header{
         position: fixed;
         width: 100%;
         padding: 5px 0px;
-        background-color: $pageColor;
-        color: $whiteLetters;
+        background-color: var(--pageColor);
+        color: var(--whiteLetters);;
         z-index: 5;
         @include fleks-between();
         a{
             :hover{
-                color: $assetsBlue;
+                color: var(--assetsBlue);
                 transition: 0.5s;
             }
             i{
@@ -68,8 +69,8 @@ body{
                 @include fleks-center();
                 a{
                     :hover{
-                        background-color: $assetsBlue;
-                        color: $whiteLetters;
+                        background-color: var(--assetsBlue);
+                        color: var(--whiteLetters);
                         transition: 0.5s;
                     }
                     li{
@@ -100,27 +101,30 @@ body{
                     h1{
                         font-size: 65px;
                         padding-bottom: 50px;
+                        color: var(--pageColor);
                     }
                     p{
                         font-size: 30px;
+                        color: var(--pageColor);
                     }
                     span{
                         font-size: 50px;
+                        color: var(--pageColor);
                     }
                     a{
                         button{
                             margin-top: 20px;
                             padding: 20px 50px;
-                            background-color: $assetsBlue;
-                            border: 1px solid $pageColor;
+                            background-color: var(--assetsBlue);
+                            border: 1px solid var(--pageColor);
                             border-radius: 25px;
                             cursor: pointer;
-                            color: white;
+                            color: var(--whiteLetters);
                         }
                         :hover{
-                            background-color: $whiteLetters;
-                            border: 1px solid $assetsBlue;
-                            color: black;
+                            background-color: var(--whiteLetters);
+                            border: 1px solid var(--assetsBlue);
+                            color: var(--pageColor);
                             transition: 0.5s;
                         }
                     }
@@ -135,12 +139,10 @@ body{
         }
         .carouselBlock{
             width: 100%;
-            border-top: 1px solid $pageColor;
-            border-bottom: 1px solid $pageColor;
             text-align: center;
             padding-bottom: 50px;
-            background-color: $pageColor;
-            color: $whiteLetters;
+            background-color: #2e2e2e;
+            color: #FFFFFF;
             .carouselHeading{
                 padding: 50px 0px;
             }
@@ -154,7 +156,7 @@ body{
                         margin: 0px auto;
                         text-align: center;
                         border-radius: 15px;
-                        color: $pageColor;
+                        color: var(--pageColor);
                         position: relative;
                         .artistName{
                             width: 100%;
@@ -177,8 +179,8 @@ body{
                         .artistName{
                             display:block;
                             border-radius: 15px;
-                            background-color: rgba($color: $pageColor, $alpha: 0.5);
-                            color: $whiteLetters;
+                            background-color: rgba($color: black, $alpha: 0.5);
+                            color: #FFFFFF;
                             height: 100%;
                             cursor: pointer;
                         }
@@ -195,9 +197,9 @@ body{
                 height: 0%;
                 margin: 25px 0px;
                 border-radius: 15px;
-                background-color: $pageColor;
-                color: $whiteLetters;
-                box-shadow: 0px 3px 6px $pageColor;
+                background-color: #2e2e2e;
+                color: #FFFFFF;
+                box-shadow: 0px 3px 6px #2e2e2e;
                 display: none;
                 h2,p,span{
                     margin: 10px 10px 0px 10px;
@@ -211,7 +213,7 @@ body{
                 }
                 span{
                     padding-bottom: 10px;
-                    color: $assetsBlue;
+                    color: var(--assetsBlue);
                     font-weight: bold;
                 }
                 img{
@@ -253,7 +255,7 @@ body{
                     border-radius: 7px;
                     padding: 10px 5px;
                     margin: 15px 0px;
-                    border: 1px solid $assetsBlue;
+                    border: 1px solid var(--assetsBlue);
                 }
                 .around{
                     @include fleks-around;
@@ -276,7 +278,7 @@ body{
                 button{
                     width: 40%;
                     padding: 10px 5px;
-                    background-color: $whiteLetters;
+                    background-color: var(--whiteLetters);
                     cursor: pointer;
                 }
             }
@@ -314,8 +316,9 @@ body{
             .authorText{
                 padding: 100px 0px;
                 h2,p{
+                    color: var(--pageColor);
                     a{
-                        color: $assetsBlue;
+                        color: var(--assetsBlue);
                     }
                     :hover{
                         color: rgb(206, 95, 21);
@@ -332,15 +335,15 @@ body{
     #footer{
         width: 100%;
         @include fleks-center();
-        background-color: $pageColor;
+        background-color: var(--pageColor);
         padding: 20px 0px;
         ul{
             width: 20%;
             margin: 15px 0px;
             padding: 10px 25px;
-            color: $whiteLetters;
+            color: var(--whiteLetters);
             list-style-type: disc;
-            border-left: 2px solid $whiteLetters;
+            border-left: 2px solid var(--whiteLetters);
             li{
                 padding: 10px 0px;
             }
@@ -348,9 +351,9 @@ body{
         .copyright{
             width: 100%;
             text-align: center;
-            color: $whiteLetters;
+            color: var(--whiteLetters);
             a{
-                color:$assetsBlue;
+                color: var(--assetsBlue);
             }
             :hover{
                 color: rgb(206, 95, 21);
@@ -366,11 +369,11 @@ body{
     width: 42px;
     height: 42px;
     z-index: 8;
-    background-color: $pageColor;
-    border: 3px solid $assetsBlue;
+    background-color: var(--pageColor);
+    border: 3px solid var(--assetsBlue);
     border-radius: 15px;
     transition: 0.5s;
-    color: white;
+    color: var(--whiteLetters);
     text-align: center;
     opacity: 0;
     transition: 0.1s;
@@ -379,10 +382,27 @@ body{
         padding: 10px 0px; 
     }
 }
+#toggleNightMode, #toggleNightModeNoPicture{
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 42px;
+    height: 42px;
+    z-index: 8;
+    text-align: center;
+    cursor: pointer;
+    p{
+        color: var(--pageColor);
+    }
+    i{
+        color: var(--pageColor);
+        font-size: 40px;
+    }
+}
 @for $i from 0 through 11 {
     
     #slick-slide-control0#{$i}::before {
-        color: white;
+        color: var(--whiteLetters)
     }
 }
 @media screen and (max-width: 1450px) {
@@ -623,7 +643,7 @@ body{
                 padding-bottom: 0px;
                 h2,p{
                     a{
-                        color: $assetsBlue;
+                        color: var(--assetsBlue);
                     }
                     :hover{
                         color: rgb(206, 95, 21);
@@ -732,6 +752,22 @@ body{
                 padding: 10px 0px;
             }
         }
+        #toggleNightMode, #toggleNightModeNoPicture{
+            top: 60px;
+            right: 20px;
+            width: 42px;
+            height: 42px;
+            z-index: 8;
+            text-align: center;
+            cursor: pointer;
+            p{
+                display: none;
+            }
+            i{
+                color: var(--pageColor);
+                font-size: 40px;
+            }
+        }
     }
 }
 @media screen and (max-width: 380px) {
@@ -796,7 +832,7 @@ body{
                 .authorText{
                     h2,p{
                         a{
-                            color: $assetsBlue;
+                            color: var(--assetsBlue);
                         }
                         :hover{
                             color: rgb(206, 95, 21);
