@@ -49,11 +49,11 @@ let passwordRegexCheck = /^[A-Za-z0-9]{5,20}$/;
 form.addEventListener("submit", (e) => {
     numberMistakes = 0;
     e.preventDefault();
-    checkName(nickname, "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..");
-    passwordCheck(password, "Your password should be at least 5 characters long and contain letters and numbers");
-    passwordConfirmCheck(password, passwordConfirm, "Passwords must match");
-    emailCheck(email, "Must conatin @, domain after @, example: name@domain.com");
-    yearsCheck(year, "You must be over 16 years");
+    checkName(nickname);
+    passwordCheck(password);
+    passwordConfirmCheck(password, passwordConfirm);
+    emailCheck(email);
+    yearsCheck(year);
     if (numberMistakes == 0){
         alert("Sucesfull registration");
         setTimeout("location.reload(true);", 0);
@@ -64,9 +64,9 @@ form.addEventListener("reset", () => {
     setTimeout("location.reload(true);", 0);
 });
 
-let checkName = (check, message) => {
+let checkName = (check) => {
     if (!nicknameRegexCheck.test(check.value)) {
-      errors[0].innerHTML = message;
+      errors[0].innerHTML = "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..";
       numberMistakes++;
     } 
     else {
@@ -74,9 +74,9 @@ let checkName = (check, message) => {
     }
   };
 
-let passwordCheck = (check, message) =>{
+let passwordCheck = (check) =>{
   if (check.value == "" || !passwordRegexCheck.test(check.value)) {
-    errors[1].innerHTML = message;
+    errors[1].innerHTML = "Your password should be at least 5 characters long and contain letters and numbers";
     numberMistakes++;
   } 
   else {
@@ -84,9 +84,9 @@ let passwordCheck = (check, message) =>{
   }
 }
 
-let passwordConfirmCheck = (check, check2, message) =>{
+let passwordConfirmCheck = (check, check2) =>{
   if (check2.value == "" || check.value != check2.value) {
-    errors[2].innerHTML = message;
+    errors[2].innerHTML = "Passwords must match";
     numberMistakes++;
   } 
   else {
@@ -94,16 +94,16 @@ let passwordConfirmCheck = (check, check2, message) =>{
   }
 }
 
-let emailCheck = (check, message) => {
+let emailCheck = (check) => {
     if (!emailRegexCheck.test(check.value)) {
-      errors[3].innerHTML = message;
+      errors[3].innerHTML = "Must conatin @, domain after @, example: name@domain.com";
       numberMistakes++;
     } else errors[3].innerHTML = "";
   };
 
-let yearsCheck = (check, message) => {
+let yearsCheck = (check) => {
     if (parseInt(check.value) > 2005) {
-      errors[5].innerHTML = message;
+      errors[5].innerHTML = "You must be over 16 years";
       numberMistakes++;
     } else errors[5].innerHTML = "";
 };
