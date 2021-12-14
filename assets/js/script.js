@@ -1,3 +1,4 @@
+console.log("OK");
 if( window.location.pathname == '/musichousedaily/index.html' || window.location.pathname == '/musichousedaily/'){
   indexPage();
 }
