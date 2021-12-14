@@ -501,7 +501,7 @@ function registerPage(){
       } 
       else {
         nicknameBool = false;
-        errors[0].innerHTML = "Your nickname is invalid, you need at least 3 numbers, example: Jimmy123, Tody457..";
+        errors[0].innerHTML = "Your nickname is invalid, you need at least 3 numbers, example: jimmy123, Tody457..";
       }
     };
 
