@@ -1,5 +1,3 @@
-console.log("OK");
-
 if( window.location.pathname == '/musichousedaily/index.html' || window.location.pathname == '/musichousedaily/'){
   indexPage();
 }
@@ -182,7 +180,6 @@ function toTop() {
 }
 
 function indexPage(){
-  console.log("OK");
   // changing title on the start of the index page
 
   var title = ["reviews", "artists", "albums"];
