@@ -85,7 +85,7 @@ $("#toggleNightModeNoPicture").click(() =>{
   }
 });
 
-//end of dark mode button from stackoverflow
+//end of dark mode button
 
 // creating header in HTML
 
