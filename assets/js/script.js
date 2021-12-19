@@ -239,10 +239,6 @@ function indexPage(){
 
   carouselBlock.appendChild(artistCarousel);
 
-
-
-
-
   $(document).ready(function(){
     $("#carousel").slick({
       centerMode: true,
